@@ -1,0 +1,36 @@
+
+.card {
+  margin: 10px;
+}
+
+.card-top {
+  // overflow: hidden;
+  // background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 395px;
+  height: 250px;
+  opacity: 0.5;
+  position: relative;
+  background-color: #000;
+
+
+}
+
+
+.card .card-bottom {
+  background-color: rgb(200, 200, 225);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 80px;
+  width: 395px;
+
+}
+
+.card-info {
+  z-index:10;
+  opacity:1.00;
+  position: absolute;
+
+}

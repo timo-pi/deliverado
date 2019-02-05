@@ -2,6 +2,7 @@
 
 <p>
 <% @my_deliveries.each do |delivery| %>
-<%= delivery.request.message %><br>
+<%= delivery.request.order_number %><br>
+<%= delivery.request.delivery_address %><br>
 <% end %>
 </p>

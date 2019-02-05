@@ -1,36 +1,38 @@
-
 .card {
   margin: 10px;
-}
-
-.card-top {
-  // overflow: hidden;
-  // background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // border: solid grey 6px;
+  box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
   width: 395px;
-  height: 250px;
-  opacity: 0.5;
-  position: relative;
-  background-color: #000;
-
-
 }
 
-
-.card .card-bottom {
-  background-color: rgb(200, 200, 225);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.logo {
   height: 80px;
-  width: 395px;
-
+  margin: 5px;
 }
 
 .card-info {
-  z-index:10;
-  opacity:1.00;
-  position: absolute;
+  color: #fb0022;
+  text-shadow: 2px 3px 2px rgba(102,102,102,0.25);
+  position: relative;
+  height: 165px;
+}
 
+.size-m {
+  font-size: 22px;
+}
+
+.size-l {
+  font-size: 28px;
+}
+
+.paket {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#address{
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
 }

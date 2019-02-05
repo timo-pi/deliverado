@@ -3,16 +3,34 @@
 
 
 <% @requests.each do |request| %>
-  <div class="card">
-    <div class="card-top" style="background-image: url('<%= image_url "logo.jpg" %>');background-size: cover;">
+<div class="card">
 
-      <div class="card-info">
-        <p><%= request.delivery_address %></p>
-        <p><%= request.phone_number %></p>
-        <p>size: <%= request.size %></p>
-      </div>
-</div>
+  <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
   </div>
+
+  <div class="card-info">
+    <p id="address">
+      <%= request.name %>
+      <br>
+      <%= request.delivery_address %>
+      <br>
+      <%= request.city %>
+    </p>
+    <div class="paket">
+      <% if request.size == "S"  %>
+      <%= request.size %>
+      <i class="fas fa-box"></i>
+      <% elsif request.size == "M"  %>
+      <%= request.size %>
+      <i class="fas fa-box size-m"></i>
+      <% elsif request.size == "L"  %>
+      <%= request.size %>
+      <i class="fas fa-box size-l"></i>
+      <% end %>
+    </div>
+  </div>
+
+</div>
 <% end %>
 
 

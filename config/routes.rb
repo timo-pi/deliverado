@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/steps', to: 'steps#step_1'
   get '/steps/step_2', to: 'steps#step_2'
   root to: 'pages#home'
+  get 'dashboard', to: 'dashboards#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :requests, only: [:index, :show]

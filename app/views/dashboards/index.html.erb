@@ -1,0 +1,7 @@
+<h1>Dashboard for User <%= current_user.email %></h1>
+
+<p>
+<% @my_requests.each do |request| %>
+<%= request.message %><br>
+<% end %>
+</p>

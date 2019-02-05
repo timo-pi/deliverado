@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get '/steps/step_2', to: 'steps#step_2'
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :requests, only: [:index, :show]
+
   resources :routes, only: [:new, :index, :show]
 
 end

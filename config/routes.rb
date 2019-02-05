@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'dashboards#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :requests, only: [:index, :show]
+
   resources :routes, only: [:new, :index, :show]
 
 end

@@ -1,0 +1,51 @@
+<h2>Pending requests</h2>
+
+
+
+<% @requests.each do |request| %>
+<div class="card">
+
+  <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
+  </div>
+
+  <div class="card-info">
+    <p id="address">
+      <%= request.name %>
+      <br>
+      <%= request.delivery_address %>
+      <br>
+      <%= request.city %>
+    </p>
+    <div class="paket">
+      <% if request.size == "S"  %>
+      <%= request.size %>
+      <i class="fas fa-box"></i>
+      <% elsif request.size == "M"  %>
+      <%= request.size %>
+      <i class="fas fa-box size-m"></i>
+      <% elsif request.size == "L"  %>
+      <%= request.size %>
+      <i class="fas fa-box size-l"></i>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+<% end %>
+
+
+
+<!--
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title here</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+  </div>
+</div>
+COPY
+ -->

@@ -1,7 +1,7 @@
-<h1>Dashboard for User <%= current_user.email %></h1>
+<h3>Accepted Delivery orders:</h3>
 
 <p>
-<% @my_requests.each do |request| %>
-<%= request.message %><br>
+<% @my_deliveries.each do |delivery| %>
+<%= delivery.request.message %><br>
 <% end %>
 </p>

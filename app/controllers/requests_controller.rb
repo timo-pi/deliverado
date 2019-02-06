@@ -1,9 +1,14 @@
 class RequestsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
-    @requests = Request.all
+    @requests = policy_scope(Request)
   end
 
   def show
-    @request = Request.find(params[:id])
+    if user_signed_in?
+      @request = Request.find(params[:id])
+    authorize @request
+    end
   end
 end

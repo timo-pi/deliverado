@@ -1,1 +1,26 @@
-<h2> step_2.html.erb</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="map-placeholder"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="steps-form">
+
+        <%= form_for :route, url: { action: "step_3"}, method: :get do |f| %>
+
+        <div class="form-inputs">
+          <%= f.label :end_address, 'Enter your work address:' %>
+          <%= f.text_field :end_address %>
+
+        </div>
+        <%= f.hidden_field :start_address, value: params[:route][:start_address] %>
+        <div class="form-actions">
+          <%= f.submit class: "btn full_btn"%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

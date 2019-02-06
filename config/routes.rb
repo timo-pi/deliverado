@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   resources :requests, only: [:index, :show]
 
-  resources :routes, only: [:new, :index, :show]
+  resources :routes, only: [:create, :index, :show]
 
 end

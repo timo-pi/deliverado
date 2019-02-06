@@ -1,13 +1,9 @@
 <h3>Pending requests</h3>
-
-
 <% @requests.each do |request| %>
   <%= link_to request_path(request) do %>
     <div class="card">
-
       <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
       </div>
-
       <div class="card-info">
         <p id="address">
           <%= request.name %>
@@ -32,8 +28,6 @@
     </div>
   <% end %>
 <% end %>
-
-
 
 <!--
 <div class="card-trip">

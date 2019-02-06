@@ -10,7 +10,6 @@ require 'date'
 puts 'Create requests'
 Request.destroy_all
 test_request1 = Request.create(order_number: "AE6734251",
-                            delivery_address: "Oliver Pocher, Gaimersheimer Str. 3",
                             name: "Oliver Pocher",
                             delivery_address: "Gaimersheimer Str. 3",
                             city: "85098 Ingolstadt",

@@ -1,15 +1,25 @@
-<h2> step_1.html.erb</h2>
-<%= form_for :route, url: { action: "step_2"}, method: :get do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="map-placeholder"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="steps-form">
 
-<div class="form-inputs">
-<%= f.text_field :start_address %>
-<%#= f.input :end_address %>
-<%#= f.input :delivery_radius %>
+        <%= form_for :route, url: { action: "step_2"}, method: :get do |f| %>
 
- </div>
-<%#= f.hidden_field :start_address, value: params[:start_address] %>
-<div class="form-actions">
-<%= f.submit class: "btn full_btn"%>
+        <div class="form-inputs">
+          <%= f.label :start_address, 'Enter your home address:' %>
+          <%= f.text_field :start_address %>
+
+        </div>
+        <div class="form-actions">
+          <%= f.submit class: "btn full_btn"%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-<% end %>
-

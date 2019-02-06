@@ -2,14 +2,18 @@ class RoutesController < ApplicationController
   def index
     policy_scope(Route)
     @routes = Route.all
+    @markers = @routes.map do |route|
+      {
+        lng: route.end_longitude,
+        lat: route.end_latitude
+      }
+    end
   end
 
   def show
   end
 
   def create
-    @route = Route.new
-    authorize @route
     @route.start_address = params[:route][:start_address]
     @route.end_address = params[:route][:end_address]
     @route.delivery_radius = params[:route][:delivery_radius]

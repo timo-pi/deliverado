@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper-home">
+  <div id="title-home" class='text-center'>
+    <h1>Deliverado</h1>
+    <h4>The eco-friendly delivery <br> service for your goods!</h4>
+  </div>
+  <!-- Login link (when logged out) -->
+    <div id="login">
+      <div class="col-md-4 text-center" >
+        <div class="form-actions">
+          <%= link_to t(".sign_in", default: "Login" ), new_user_session_path, class: "btn btn-home btn-primary" %>
+        </div>
+        <a href="/users/sign_up"Sign up></a>
+      </div>
+    </div>
+</div>

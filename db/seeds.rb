@@ -31,7 +31,7 @@ test_request2 = Request.create(order_number: "BD8402548",
                             phone_number: "+49 176039276")
 
 test_request3 = Request.create(order_number: "TN48392664",
-                            delivery_address: "Ezgi Seyis, Waldweg 27",
+ 
                             name: "Ezgi Seyis",
                             delivery_address: "Promenadenweg 9",
                             city: "84048 Mainburg",

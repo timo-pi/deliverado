@@ -7,7 +7,6 @@ class StepsController < ApplicationController
 
   def step_2
     authorize :step, :step_2?
-    raise
   end
 
   def step_3

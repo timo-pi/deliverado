@@ -34,7 +34,7 @@ test_request2 = Request.create(order_number: "BD8402548",
 test_request3 = Request.create(order_number: "TN48392664",
                             delivery_address: "Ezgi Seyis, Waldweg 27",
                             name: "Ezgi Seyis",
-                            delivery_address: "Waldweg 27",
+                            delivery_address: "Promenadenweg 9",
                             city: "84048 Mainburg",
                             size: "L",
                             message: "Please be careful",
@@ -42,4 +42,13 @@ test_request3 = Request.create(order_number: "TN48392664",
                             time_to: DateTime.new(2019,2,6,19,0,0),
                             phone_number: "+49 1508893765")
 
-puts "Finished!"
+puts "Finished Requests!"
+
+puts 'Create routes'
+Route.destroy_all
+test_route1 = Route.create(start_address: "Eriagsstr. 28, Ingolstadt",
+                          end_address: "Von-Reisbachstr. 24, Mainburg",
+                          delivery_radius: 8,
+                          name: "Testroute",
+                          user_id: 1)
+puts "Finished Routes!"

@@ -1,36 +1,36 @@
 <h3>Pending requests</h3>
 
 
-
 <% @requests.each do |request| %>
-<div class="card">
+  <%= link_to request_path(request) do %>
+    <div class="card">
 
-  <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
-  </div>
+      <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
+      </div>
 
-  <div class="card-info">
-    <p id="address">
-      <%= request.name %>
-      <br>
-      <%= request.delivery_address %>
-      <br>
-      <%= request.city %>
-    </p>
-    <div class="paket">
-      <% if request.size == "S"  %>
-      <%= request.size %>
-      <i class="fas fa-box"></i>
-      <% elsif request.size == "M"  %>
-      <%= request.size %>
-      <i class="fas fa-box size-m"></i>
-      <% elsif request.size == "L"  %>
-      <%= request.size %>
-      <i class="fas fa-box size-l"></i>
-      <% end %>
+      <div class="card-info">
+        <p id="address">
+          <%= request.name %>
+          <br>
+          <%= request.delivery_address %>
+          <br>
+          <%= request.city %>
+        </p>
+        <div class="paket">
+          <% if request.size == "S"  %>
+          <%= request.size %>
+          <i class="fas fa-box"></i>
+          <% elsif request.size == "M"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-m"></i>
+          <% elsif request.size == "L"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-l"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
-
-</div>
+  <% end %>
 <% end %>
 
 

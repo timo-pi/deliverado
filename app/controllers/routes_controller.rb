@@ -14,6 +14,8 @@ class RoutesController < ApplicationController
   end
 
   def create
+    @route = Route.new
+    authorize(@route)
     @route.start_address = params[:route][:start_address]
     @route.end_address = params[:route][:end_address]
     @route.delivery_radius = params[:route][:delivery_radius]

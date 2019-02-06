@@ -2,6 +2,7 @@
   "name": "deliverado",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^3.1.1",
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.0",
     "jquery": "^3.3.1",

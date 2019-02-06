@@ -30,7 +30,7 @@ test_request2 = Request.create(order_number: "BD8402548",
                             phone_number: "+49 176039276")
 
 test_request3 = Request.create(order_number: "TN48392664",
- 
+
                             name: "Ezgi Seyis",
                             delivery_address: "Promenadenweg 9",
                             city: "84048 Mainburg",
@@ -44,7 +44,7 @@ puts "Finished Requests!"
 
 puts 'Create routes'
 Route.destroy_all
-test_route1 = Route.create(start_address: "Eriagsstr. 28, Ingolstadt",
+test_route1 = Route.create(start_address: "Eriagstr. 28, Ingolstadt",
                           end_address: "Von-Reisbachstr. 24, Mainburg",
                           delivery_radius: 8,
                           name: "Testroute",

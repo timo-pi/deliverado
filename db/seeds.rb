@@ -10,28 +10,21 @@ require 'date'
 puts 'Create requests'
 Request.destroy_all
 test_request1 = Request.create(order_number: "AE6734251",
-<<<<<<< HEAD
                             delivery_address: "Oliver Pocher, Gaimersheimer Str. 3",
-=======
                             name: "Oliver Pocher",
                             delivery_address: "Gaimersheimer Str. 3",
                             city: "85098 Ingolstadt",
->>>>>>> 83b0fe41fdfe9d37779e10e9791bb6ecc15e199a
                             size: "M",
                             message: "it is a coffee machine",
                             time_from: DateTime.new(2019,2,5,18,0,0),
                             time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 1513849629")
 
-
 test_request2 = Request.create(order_number: "BD8402548",
-<<<<<<< HEAD
                             delivery_address: "Stefan Raab, Sandstr. 56",
-=======
                             name: "Stefan Raab",
                             delivery_address: "Sandstr. 56",
                             city: "89076 München",
->>>>>>> 83b0fe41fdfe9d37779e10e9791bb6ecc15e199a
                             size: "S",
                             message: "I'm home the whole day",
                             time_from: DateTime.new(2019,2,7,12,0,0),
@@ -39,13 +32,10 @@ test_request2 = Request.create(order_number: "BD8402548",
                             phone_number: "+49 176039276")
 
 test_request3 = Request.create(order_number: "TN48392664",
-<<<<<<< HEAD
                             delivery_address: "Ezgi Seyis, Waldweg 27",
-=======
                             name: "Ezgi Seyis",
                             delivery_address: "Waldweg 27",
                             city: "84048 Mainburg",
->>>>>>> 83b0fe41fdfe9d37779e10e9791bb6ecc15e199a
                             size: "L",
                             message: "Please be careful",
                             time_from: DateTime.new(2019,2,6,17,0,0),

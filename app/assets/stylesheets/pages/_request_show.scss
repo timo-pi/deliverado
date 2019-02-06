@@ -1,0 +1,37 @@
+.all {
+  box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 1px #E6E6E6;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  width: 40%;
+  margin-left: 3%;
+}
+
+.right {
+  width: 60%;
+  padding-top: 3%;
+}
+
+.info p {
+  font-size: 85%;
+}
+
+.buttons {
+
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+
+  margin: 15px auto;
+}

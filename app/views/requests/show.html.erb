@@ -1,0 +1,38 @@
+<h3>Order information for:</h3>
+<p><%= @request.order_number %></p>
+
+
+<div class="all">
+  <div class="top">
+    <div class="left">
+      <h5>Store</h5>
+      <i class="fas fa-store-alt" style="font-size: 20px"></i>
+    </div>
+    <div class="right">
+      <p>Store name</p>
+      <p>Adresse</p>
+      <p>plz stadt</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="left">
+      <h5>Customer</h5>
+      <i class="fas fa-phone-volume" style="font-size: 20px"></i>
+      <p><%= @request.phone_number %></p>
+    </div>
+    <div class="right">
+      <p><%= @request.name %></p>
+      <p><%= @request.delivery_address %></p>
+      <p><%= @request.city %></p>
+    </div>
+  </div>
+</div>
+
+<div class="buttons">
+
+  <%= link_to "Accept", "#", class: "btn btn-primary"  %>
+  <p>or</p>
+  <%= link_to "Decline", "#", class: "btn btn-primary"  %>
+</div>
+

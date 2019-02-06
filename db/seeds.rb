@@ -20,7 +20,6 @@ test_request1 = Request.create(order_number: "AE6734251",
                             phone_number: "+49 1513849629")
 
 test_request2 = Request.create(order_number: "BD8402548",
-                            delivery_address: "Stefan Raab, Sandstr. 56",
                             name: "Stefan Raab",
                             delivery_address: "Sandstr. 56",
                             city: "89076 München",

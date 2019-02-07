@@ -1,8 +1,9 @@
 <h1>Routes</h1>
-
-<%= render 'shared/maps' %>
+<div class="map_routes">
+  <%= render 'shared/maps' %>
+</div>
 <br>
 <% @routes.each do |route| %>
- <p><%= route.name %></p>
+<p><%= route.name %></p>
 <% end %>
 

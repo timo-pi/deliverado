@@ -1145,6 +1145,11 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
+bootstrap-slider@^10.6.0:
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.6.0.tgz#54926997ed7d86dd7887bb3f25581e79b2c0f911"
+  integrity sha512-9GBrmXIyoHPiV1AurB/nsTS3FCd2d59QCdag1V4TijtG4rJvDv9RUf7I4SaoBXeSz0I+87vePoTuzVJDQZ2oGw==
+
 bootstrap@3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.0.tgz#f8d77540dd3062283d2ae7687e21c1e691961640"

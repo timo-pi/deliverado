@@ -13,12 +13,19 @@
 
         <div class="form-inputs">
           <%= f.label :delivery_radius, 'Enter a delivery Radius (km):' %>
-          <%= f.text_field :delivery_radius %>
+          <br>
+          <%= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
         </div>
-          <div class="form-inputs">
+
+        <br>
+        <!--Route Name-->
+        <div class="form-inputs">
           <%= f.label :name, 'Route Name:' %>
+          <br>
           <%= f.text_field :name %>
         </div>
+
+        <br>
 
         <%= f.hidden_field :start_address, value: params[:route][:start_address] %>
         <%= f.hidden_field :end_address, value: params[:route][:end_address] %>

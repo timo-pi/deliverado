@@ -17,15 +17,16 @@
 }
 #title-home h1 {
   font-size: 50px;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  font-family: Russo One;
-   color: $white;
-  text-shadow: 1px 1px #9999ff;
+  // text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  color: $white;
+  font-weight: bold;
+  letter-spacing: -1px;
+  // text-shadow: 1px 1px #9999ff;
   position: relative;
 }
 #title-home h4{
  color: $white;
- text-shadow: 1px 1px #9999ff;
+ text-shadow: 1px 1px 3px grey;
  margin-top: 50px;
 }
 #login {
@@ -37,5 +38,6 @@
 }
 .btn-home {
   padding: 10px 80px;
-  background-color: $primary;
+  background-color: $accent;
+  color: black;
 }

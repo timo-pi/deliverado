@@ -1,19 +1,20 @@
 <div class="navbar-wagon">
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-wagon-item">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu navbar-wagon-dropdown-menu">
         <li> <%= link_to "Dashbord", dashboard_path %> </li>
-        <li><%= link_to "Dashbord", dashboard_path %></li>
+        <li><%= link_to "Route Setup", step_1_path %></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
   </div>
+
   <div class="navbar-wagon">
     <!-- Logo -->
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <h4> Deliverado <%= image_tag "logo.png" %></h4>
+      <h4> Deliverado <%= image_tag "logo.png" %></h4>
     <% end %>
   </div>
 </div>

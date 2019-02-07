@@ -1,9 +1,14 @@
 class RoutesController < ApplicationController
   def index
-    policy_scope(Route)
-    @routes = Route.all
+    @routes = policy_scope(Route)
     @markers = @routes.map do |route|
       {
+        lng: route.start_longitude,
+        lat: route.start_latitude
+      }
+    end
+    @routes.map do |route|
+      @markers << {
         lng: route.end_longitude,
         lat: route.end_latitude
       }

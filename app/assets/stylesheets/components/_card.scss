@@ -3,6 +3,12 @@
   // border: solid grey 6px;
   box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
   width: 100%;
+  max-width: 385px;
+}
+@media(min-width: 1024px){
+  .card {
+    margin: 0 auto;
+  }
 }
 
 .logo {

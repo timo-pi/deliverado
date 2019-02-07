@@ -11,6 +11,9 @@ col-sm-offset-2 -->
       <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
       </div>
       <div class="card-info">
+        <p id="store-address">
+          <%= request.store.store_address %>
+        </p>
         <p id="address">
           <%= request.name %>
           <br>

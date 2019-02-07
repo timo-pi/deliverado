@@ -22,7 +22,7 @@ const initMapbox = () => {
     .addTo(map);
   });
   fitMapToMarkers(map, markers);
-  map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+  // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
 }
 };
 

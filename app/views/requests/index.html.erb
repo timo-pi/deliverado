@@ -1,7 +1,13 @@
 <h3>Pending requests</h3>
-<% @requests.each do |request| %>
+<!--
+col-sm-offset-2 -->
+
+<div class="row">
+  <% @requests.each do |request| %>
   <%= link_to request_path(request) do %>
+  <div class="col-xs-12 col-sm-6 col-md-6">
     <div class="card">
+
       <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
       </div>
       <div class="card-info">
@@ -26,20 +32,21 @@
         </div>
       </div>
     </div>
-  <% end %>
-<% end %>
-
-<!--
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-  <div class="card-trip-infos">
-    <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
-    </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
+
+  <% end %>
+  <% end %>
 </div>
-COPY
- -->
+
+
+
+
+
+<!-- <div class="row justify-content-around">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+  </div> -->

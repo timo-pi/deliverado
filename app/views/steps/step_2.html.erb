@@ -9,7 +9,7 @@
 
         <div class="form-inputs">
           <%= f.label :end_address, 'Enter your work address:' %>
-          <%= f.text_field :end_address %>
+          <%= f.text_field :end_address, id: "flat_address" %>
 
         </div>
         <%= f.hidden_field :start_address, value: params[:route][:start_address] %>

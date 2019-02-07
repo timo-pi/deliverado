@@ -1,13 +1,13 @@
 class StepsController < ApplicationController
-
   def step_1
     authorize :step, :step_1?
     @route = Route.new
+    first_result = Geocoder.search("Ingolstadt")
     @markers = []
     @markers << {
 
-      lng: 11.424444,
-      lat: 48.765556
+      lng: first_result.first.coordinates.second,
+      lat: first_result.first.coordinates.first
     }
   end
 
@@ -38,5 +38,4 @@ class StepsController < ApplicationController
       lat: result_end.first.coordinates.first
     }
   end
-
 end

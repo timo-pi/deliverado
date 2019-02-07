@@ -5,6 +5,11 @@
   width: 100%;
   max-width: 385px;
 }
+@media(min-width: 1024px){
+  .card {
+    margin: 0 auto;
+  }
+}
 
 .logo {
   height: 80px;

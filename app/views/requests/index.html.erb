@@ -1,40 +1,45 @@
 <h3>Pending requests</h3>
-   <div class="row">
-<% @requests.each do |request| %>
+<!--
+col-sm-offset-2 -->
+
+<div class="row">
+  <% @requests.each do |request| %>
   <%= link_to request_path(request) do %>
-      <div class="col-xs-12 col-lg-3">
-        <div class="card">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="card">
 
-
-
-          <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
-          </div>
-          <div class="card-info">
-            <p id="address">
-              <%= request.name %>
-              <br>
-              <%= request.delivery_address %>
-              <br>
-              <%= request.city %>
-            </p>
-            <div class="paket">
-              <% if request.size == "S"  %>
-              <%= request.size %>
-              <i class="fas fa-box"></i>
-              <% elsif request.size == "M"  %>
-              <%= request.size %>
-              <i class="fas fa-box size-m"></i>
-              <% elsif request.size == "L"  %>
-              <%= request.size %>
-              <i class="fas fa-box size-l"></i>
-              <% end %>
-            </div>
-          </div>
+      <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
+      </div>
+      <div class="card-info">
+        <p id="address">
+          <%= request.name %>
+          <br>
+          <%= request.delivery_address %>
+          <br>
+          <%= request.city %>
+        </p>
+        <div class="paket">
+          <% if request.size == "S"  %>
+          <%= request.size %>
+          <i class="fas fa-box"></i>
+          <% elsif request.size == "M"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-m"></i>
+          <% elsif request.size == "L"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-l"></i>
+          <% end %>
         </div>
       </div>
     </div>
+  </div>
+
   <% end %>
-<% end %>
+  <% end %>
+</div>
+
+
+
 
 
 <!-- <div class="row justify-content-around">

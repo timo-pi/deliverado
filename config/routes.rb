@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :requests, only: [:index, :show]
 
+  resources :stores, only: [:index]
+
   resources :routes, only: [:create, :index, :show]
 
 end

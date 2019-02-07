@@ -9,6 +9,12 @@ class RequestsController < ApplicationController
     if user_signed_in?
       @request = Request.find(params[:id])
     authorize @request
+    @markers = []
+    @markers << {
+
+      lng: @request.longitude,
+      lat: @request.latitude
+    }
     end
   end
 end

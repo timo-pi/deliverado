@@ -18,18 +18,7 @@
   color: $white;
   text-decoration: none;
 }
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-}
-/* Right section */
-.navbar-wagon-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
@@ -67,15 +56,11 @@
   height: 10px;
   width: 10px;
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
-#navContainer{
-  border: 1px solid red;
-  text-align: right;
-  display: block;
-}
+

@@ -1,5 +1,4 @@
-.route-card-small {
-  max-width: 400px;
+.card-small {
   margin-top: 5px;
   overflow: hidden;
   height: 100px;
@@ -9,14 +8,13 @@
   align-items: center;
 }
 
-.route-card-info {
+.card-small-info {
   position: absolute;
-  right: 1.2em;
-  bottom: 0.3em;
+  right: 2em;
   font-family: "Open Sans", "Helvetica", "sans-serif";
 
 }
 
-.route-card-name {
-  margin-left: 8px;
+.card-small-name {
+  margin-left: 1em;
 }

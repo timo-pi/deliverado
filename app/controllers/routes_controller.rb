@@ -16,6 +16,8 @@ class RoutesController < ApplicationController
   end
 
   def show
+    @route = Route.find(params[:id])
+    authorize @route
   end
 
   def create
@@ -26,10 +28,15 @@ class RoutesController < ApplicationController
     @route.name = params[:route][:name]
     @route.user_id = current_user.id
     authorize @route
-    if @route.save
-      redirect_to routes_path
-    else
-      raise
-    end
+    @route.save
+    redirect_to routes_path
   end
+
+  def destroy
+    @route = Route.find(params[:id])
+    authorize @route
+    @route.destroy
+    redirect_to routes_path
+  end
+
 end

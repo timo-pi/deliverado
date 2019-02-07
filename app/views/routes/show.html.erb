@@ -1,0 +1,20 @@
+<div class="container">
+<!-- map -->
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render 'shared/maps' %>
+    </div>
+  </div>
+<!-- route data -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card-route-edit">
+      <h4> <%= @route.name %> </h3>
+      <p>From: <%= @route.start_address %> </p>
+      <p>To: <%= @route.end_address %> </p>
+      <p>Radius: <%= @route.delivery_radius %> </p>
+      </div>
+      <%= link_to "back", routes_path %>
+    </div>
+  </div>
+</div>

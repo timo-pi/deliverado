@@ -7,9 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'date'
 
+puts 'Create stores'
+Store.destroy_all
+test_store1 = Store.create(store_name: "MediaMarkt",
+                          store_address: "Eriagstr. 28",
+                          store_city: "85053 Ingolstadt")
+
+test_store2 = Store.create(store_name: "MediaMarkt",
+                          store_address: "Maria-Probst-Str. 11",
+                          store_city: "80939 München")
+
+puts "Finished Stores!"
+
 puts 'Create requests'
 Request.destroy_all
-test_request1 = Request.create(order_number: "AE6734251",
+test_request1 = Request.create!(order_number: "AE6734251",
                             name: "Oliver Pocher",
                             delivery_address: "Gaimersheimer Str. 3",
                             city: "85098 Ingolstadt",
@@ -17,7 +29,8 @@ test_request1 = Request.create(order_number: "AE6734251",
                             message: "it is a coffee machine",
                             time_from: DateTime.new(2019,2,5,18,0,0),
                             time_to: DateTime.new(2019,2,5,20,0,0),
-                            phone_number: "+49 1513849629")
+                            phone_number: "+49 1513849629",
+                            store: test_store1)
 
 test_request2 = Request.create(order_number: "BD8402548",
                             name: "Stefan Raab",
@@ -27,7 +40,8 @@ test_request2 = Request.create(order_number: "BD8402548",
                             message: "I'm home the whole day",
                             time_from: DateTime.new(2019,2,7,12,0,0),
                             time_to: DateTime.new(2019,2,7,21,0,0),
-                            phone_number: "+49 176039276")
+                            phone_number: "+49 176039276",
+                            store: test_store1)
 
 test_request3 = Request.create(order_number: "TN48392664",
 
@@ -38,7 +52,8 @@ test_request3 = Request.create(order_number: "TN48392664",
                             message: "Please be careful",
                             time_from: DateTime.new(2019,2,6,17,0,0),
                             time_to: DateTime.new(2019,2,6,19,0,0),
-                            phone_number: "+49 1508893765")
+                            phone_number: "+49 1508893765",
+                            store: test_store2)
 
 puts "Finished Requests!"
 
@@ -50,3 +65,5 @@ test_route1 = Route.create(start_address: "Eriagstr. 28, Ingolstadt",
                           name: "Testroute",
                           user_id: 1)
 puts "Finished Routes!"
+
+

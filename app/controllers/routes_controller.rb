@@ -11,20 +11,27 @@ class RoutesController < ApplicationController
   end
 
   def show
+    @route = Route.find(params[:id])
+    authorize @route
   end
 
   def create
     @route = Route.new
-    authorize(@route)
     @route.start_address = params[:route][:start_address]
     @route.end_address = params[:route][:end_address]
     @route.delivery_radius = params[:route][:delivery_radius]
     @route.name = params[:route][:name]
     @route.user_id = current_user.id
-    if @route.save
-      redirect_to routes_path
-    else
-      raise
-    end
+    authorize @route
+    @route.save
+    redirect_to routes_path
   end
+
+  def destroy
+    @route = Route.find(params[:id])
+    authorize @route
+    @route.destroy
+    redirect_to routes_path
+  end
+
 end

@@ -1,0 +1,22 @@
+.route-card-small {
+  max-width: 400px;
+  margin-top: 5px;
+  overflow: hidden;
+  height: 100px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.route-card-info {
+  position: absolute;
+  right: 1.2em;
+  bottom: 0.3em;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+
+}
+
+.route-card-name {
+  margin-left: 8px;
+}

@@ -1,8 +1,20 @@
-<h1>Routes</h1>
-
-<%= render 'shared/maps' %>
-<br>
-<% @routes.each do |route| %>
- <p><%= route.name %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <p>Your current routes</p>
+    <% @routes.each do |route| %>
+    <%= link_to route_path(route) do %>
+    <div class="col-xs-12">
+      <div class="route-card-small">
+        <div class="route-card-name"><%= route.name %>
+        </div>
+        <div class="route-card-info">
+          <i> <%= link_to "Details", route_path(route.id), class: 'fas fa-info-circle' %> </i>
+          <i> <%= link_to "Delete", route_path(route.id), method: 'delete', class: 'far fa-trash-alt' %> </i>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
 

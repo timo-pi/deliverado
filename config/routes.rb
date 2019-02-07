@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :requests, only: [:index, :show]
-
+  resources :routes, only: [:create, :index, :show, :destroy]
   resources :stores, only: [:index]
-
-  resources :routes, only: [:create, :index, :show]
 
 end

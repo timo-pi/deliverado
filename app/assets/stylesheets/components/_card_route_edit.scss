@@ -1,5 +1,4 @@
 .card-route-edit{
-  max-width: 400px;
   margin-top: 5px;
   overflow: hidden;
   max-height: 280px;
@@ -10,4 +9,17 @@
   font-size: small;
   //display: flex;
   //align-items: center;
+}
+
+.card-route-back {
+  position: absolute;
+  right: 2em;
+}
+
+.route-active {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  font-size: 3em;
+  color: #24D459;
 }

@@ -6,7 +6,7 @@
   <div class="top">
     <div class="left">
       <h5>Store</h5>
-      <i class="fas fa-store-alt" style="font-size: 20px"></i>
+      <i class="fas fa-store-alt" style="font-size: 25px"></i>
     </div>
     <div class="right">
       <p><%= @request.store.store_name %></p>
@@ -18,17 +18,19 @@
   <div class="bottom">
     <div class="left">
       <h5>Customer</h5>
-      <i class="fas fa-phone-volume" style="font-size: 20px"></i>
-      <p><%= @request.phone_number %></p>
+      <i class="fas fa-phone-square phone" style="font-size: 35px"></i>
     </div>
     <div class="right">
-      <p><%= @request.name %></p>
+      <p class="first_line"><%= @request.name %></p>
       <p><%= @request.delivery_address %></p>
       <p><%= @request.city %></p>
+      <p><%= @request.phone_number %></p>
     </div>
   </div>
 </div>
-
+<div class="map_request_show">
+<%= render 'shared/maps' %>
+</div>
 <div class="buttons">
 
   <%= link_to "Accept", "#", class: "btn btn-primary"  %>

@@ -3,6 +3,10 @@ class RequestsController < ApplicationController
 
   def index
     @requests = policy_scope(Request)
+
+    if params[:query].present? # query = die suche....
+      @requests = @requests.where(size: params[:query]) # filer solar_system
+    end
   end
 
   def show

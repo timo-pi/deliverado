@@ -1,20 +1,22 @@
-<div class="container">
 <!-- map -->
-  <div class="row">
-    <div class="col-xs-12">
-      <%= render 'shared/maps' %>
-    </div>
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin-top: 10px">
+    <%= render 'shared/maps' %>
   </div>
+</div>
 <!-- route data -->
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="card-route-edit">
-      <h4> <%= @route.name %> </h3>
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin-top: 10px">
+    <div class="card-route-edit">
+      <h4> <%= @route.name %> </h4>
       <p>From: <%= @route.start_address %> </p>
       <p>To: <%= @route.end_address %> </p>
       <p>Radius: <%= @route.delivery_radius %> </p>
-      </div>
+      <i class="fas fa-toggle-on route-active"></i>
+    </div>
+    <div class="card-route-back">
       <%= link_to "back", routes_path %>
     </div>
   </div>
 </div>
+

@@ -1,12 +1,11 @@
 class DeliveriesController < ApplicationController
-<<<<<<< HEAD
   def update
   end
 
   def edit
     @delivery = Delivery.find(params[:id])
     authorize @delivery
-=======
+  end
   def create
     @delivery = Delivery.new
     @delivery.user_id = current_user.id
@@ -19,6 +18,5 @@ class DeliveriesController < ApplicationController
     else
       raise
     end
->>>>>>> d0c2603c3a54e432110d541a6feed42e346e8c7a
   end
 end

@@ -5,10 +5,10 @@ class StoresController < ApplicationController
     @stores = policy_scope(Store)
   end
 
-  def show
-    if user_signed_in?
-      @store = Store.find(params[:id])
-    authorize @store
-    end
-  end
+  # def show
+  #   if user_signed_in?
+  #     @store = Store.find(params[:id])
+  #   authorize @store
+  #   end
+  # end
 end

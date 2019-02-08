@@ -1,12 +1,13 @@
-.card {
+.card-mediamarkt {
   margin: 0px;
   // border: solid grey 6px;
   box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
   width: 100%;
   max-width: 385px;
+  background-color: white;
 }
 @media(min-width: 1024px){
-  .card {
+  .card-mediamarkt {
     margin: 0 auto;
   }
 }
@@ -46,4 +47,26 @@
   position: absolute;
   left: 15px;
   font-style: italic;
+}
+
+.card-saturn {
+  background-color: white;
+  margin: 0px;
+  // border: solid grey 6px;
+  box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
+  width: 100%;
+  max-width: 385px;
+
+    .card-info {
+    color: #ff5a16;
+    position: relative;
+    height: 165px;
+    }
+
+
+}
+@media(min-width: 1024px){
+  .card-saturn {
+    margin: 0 auto;
+  }
 }

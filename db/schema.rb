@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_08_103829) do
     t.float "latitude"
     t.float "longitude"
     t.bigint "store_id"
-    t.integer "status"
+    t.integer "status", default: 0
     t.index ["store_id"], name: "index_requests_on_store_id"
   end
 

@@ -33,8 +33,8 @@
 </div>
 <div class="buttons">
 
-  <%= link_to "Accept", "#", class: "btn btn-primary"  %>
+  <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
   <p>or</p>
-  <%= link_to "Decline", "#", class: "btn btn-primary"  %>
+  <%= link_to "Decline", requests_path, class: "btn btn-primary"  %>
 </div>
 

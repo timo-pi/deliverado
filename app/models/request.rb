@@ -4,6 +4,7 @@ class Request < ApplicationRecord
   validates :order_number, :delivery_address, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_delivery_address?
+  enum status: { pending: 0, accepted: 1, declined: 2 }
 
   private
 

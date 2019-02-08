@@ -3,7 +3,7 @@ class DeliveriesController < ApplicationController
   end
 
   def edit
-    @delivery = Delivery.find(params[:id])
+    @delivery = Delivery.find_by(request_id: params[:id])
     authorize @delivery
   end
   def create

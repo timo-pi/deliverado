@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
 
   get '/step_1', to: 'steps#step_1'
@@ -9,7 +8,9 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'dashboards#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :requests, only: [:index, :show]
+  resources :requests, only: [:index, :show] do
+    resources :deliveries, only: [:create]
+  end
   resources :routes, only: [:create, :index, :show, :destroy]
   resources :stores, only: [:index]
 

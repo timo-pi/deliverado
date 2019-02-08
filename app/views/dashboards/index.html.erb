@@ -1,33 +1,41 @@
 <h3>Accepted delivery orders:</h3>
 
 
-<% @my_deliveries.each do |delivery| %>
-<div class="card">
+<div class="row">
+  <% @my_deliveries.each do |delivery| %>
+  <%= link_to request_path(delivery.request) do %>
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="card">
 
-  <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
-  </div>
-
-  <div class="card-info">
-    <p id="address">
-      <%= delivery.request.name %>
-      <br>
-      <%= delivery.request.delivery_address %>
-      <br>
-      <%= delivery.request.city %>
-    </p>
-    <div class="paket">
-      <% if delivery.request.size == "S"  %>
-      <%= delivery.request.size %>
-      <i class="fas fa-box"></i>
-      <% elsif delivery.request.size == "M"  %>
-      <%= delivery.request.size %>
-      <i class="fas fa-box size-m"></i>
-      <% elsif delivery.request.size == "L"  %>
-      <%= delivery.request.size %>
-      <i class="fas fa-box size-l"></i>
-      <% end %>
+      <div class="logo" style="background-image: url('<%= image_url "logo2.png" %>');background-size: cover;">
+      </div>
+      <div class="card-info">
+        <p id="store-address">
+          <%= delivery.request.store.store_address %>
+        </p>
+        <p id="address">
+          <%= delivery.request.name %>
+          <br>
+          <%= delivery.request.delivery_address %>
+          <br>
+          <%= delivery.request.city %>
+        </p>
+        <div class="paket">
+          <% if delivery.request.size == "S"  %>
+          <%= delivery.request.size %>
+          <i class="fas fa-box"></i>
+          <% elsif delivery.request.size == "M"  %>
+          <%= delivery.request.size %>
+          <i class="fas fa-box size-m"></i>
+          <% elsif delivery.request.size == "L"  %>
+          <%= delivery.request.size %>
+          <i class="fas fa-box size-l"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 
+  <% end %>
+  <% end %>
 </div>
-<% end %>

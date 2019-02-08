@@ -67,3 +67,13 @@ test_route1 = Route.create(start_address: "Eriagstr. 28, Ingolstadt",
 puts "Finished Routes!"
 
 
+user_new = User.create(
+  email: "kali@live.de",
+  password: "1234567",
+  first_name: "Hans",
+  last_name: "peter")
+
+Delivery.create(status: 1,
+    request: test_request1,
+    user: user_new)
+puts "create new Delivery"

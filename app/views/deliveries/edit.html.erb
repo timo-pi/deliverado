@@ -1,0 +1,6 @@
+<%= form_for @delivery do |f| %>
+  <%= f.signature_canvas %>
+  <p>some text about the form</p>
+  <%= f.hidden_signature_field :signature %>
+  <%= f.submit %>
+<% end %>

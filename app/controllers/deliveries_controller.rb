@@ -4,5 +4,6 @@ class DeliveriesController < ApplicationController
 
   def edit
     @delivery = Delivery.find(params[:id])
+    authorize @delivery
   end
 end

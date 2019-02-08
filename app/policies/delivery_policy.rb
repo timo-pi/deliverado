@@ -8,4 +8,8 @@ class DeliveryPolicy < ApplicationPolicy
   def edit?
     record.user == user
   end
+
+  def create?
+    true
+  end
 end

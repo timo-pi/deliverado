@@ -31,10 +31,20 @@
 <div class="map_request_show">
 <%= render 'shared/maps' %>
 </div>
+<% if @request.status == "accepted" %>
+ <div class="buttons">
+
+  <%= button_to "Route", "#", class: "btn btn-primary"  %>
+    <p>or</p>
+  <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
+</div>
+
+<% else %>
 <div class="buttons">
 
-  <%= link_to "Accept", "#", class: "btn btn-primary"  %>
+  <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
   <p>or</p>
-  <%= link_to "Decline", "#", class: "btn btn-primary"  %>
+  <%= link_to "Decline", requests_path, class: "btn btn-primary"  %>
 </div>
+<% end %>
 

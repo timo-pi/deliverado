@@ -17,6 +17,11 @@ test_store2 = Store.create(store_name: "MediaMarkt",
                           store_address: "Maria-Probst-Str. 11",
                           store_city: "80939 München")
 
+test_store3 = Store.create(store_name: "Saturn",
+                          store_address: "Am Westpark 7",
+                          store_city: "85057 Ingolstadt")
+
+
 puts "Finished Stores!"
 
 puts 'Create requests'
@@ -34,14 +39,14 @@ test_request1 = Request.create!(order_number: "AE6734251",
 
 test_request2 = Request.create(order_number: "BD8402548",
                             name: "Stefan Raab",
-                            delivery_address: "Sandstr. 56",
-                            city: "89076 München",
+                            delivery_address: "Prinzregentenstr. 74",
+                            city: "81675 München",
                             size: "S",
                             message: "I'm home the whole day",
                             time_from: DateTime.new(2019,2,7,12,0,0),
                             time_to: DateTime.new(2019,2,7,21,0,0),
                             phone_number: "+49 176039276",
-                            store: test_store1)
+                            store: test_store3)
 
 test_request3 = Request.create(order_number: "TN48392664",
 

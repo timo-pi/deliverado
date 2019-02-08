@@ -1,4 +1,10 @@
-<%= form_for @delivery do |f| %>
-  <%= f.signature_field :signature %>
+<div id="signature-canvas" class='text-center'>
+  <%= form_for @delivery do |f| %>
+    <%= f.signature_field :signature %>
+</div>
+<div id="update" class="text-center">
   <%= f.submit %>
-<% end %>
+  <% end %>
+</div>
+
+

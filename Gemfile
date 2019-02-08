@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'geocoder'
+gem 'john_hancock'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

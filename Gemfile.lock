@@ -80,6 +80,7 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    john_hancock (0.2.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -208,6 +209,7 @@ DEPENDENCIES
   font-awesome-sass (~> 5.5.0)
   geocoder
   jbuilder (~> 2.0)
+  john_hancock
   listen (~> 3.0.5)
   pg (~> 0.21)
   pry-byebug

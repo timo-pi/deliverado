@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_02_08_103829) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "signature"
     t.index ["request_id"], name: "index_deliveries_on_request_id"
     t.index ["user_id"], name: "index_deliveries_on_user_id"
   end

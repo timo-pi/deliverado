@@ -1,0 +1,43 @@
+// // Specific CSS for your home-page
+.wrapper-home{
+    height: calc(100vh - 70px); /* 70px = navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#title-home {
+  height: 100%;
+  color: #9999ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),  image-url('Page.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+#title-home h1 {
+  font-size: 50px;
+  // text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  color: $white;
+  font-weight: bold;
+  letter-spacing: -1px;
+  // text-shadow: 1px 1px #9999ff;
+  position: relative;
+}
+#title-home h4{
+ color: $white;
+ text-shadow: 1px 1px 3px grey;
+ margin-top: 50px;
+}
+#login {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-home {
+  padding: 10px 80px;
+  background-color: $accent;
+  color: black;
+}

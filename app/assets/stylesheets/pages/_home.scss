@@ -45,13 +45,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   color: $blue;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   // text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
-  // letter-spacing: -1px;
+  letter-spacing: -1px;
   // text-shadow: 1px 1px #9999ff;
   position: relative;
   text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 #tagline{
- color: $accent;
+ color: white;
  text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
  margin-top: 3vh;
  font-family: 'Varela Round', sans-serif;

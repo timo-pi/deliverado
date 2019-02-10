@@ -1,17 +1,16 @@
- <div class="row">
-  <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin-top: 10px">
-   <p>Your current routes</p>
- </div>
-   <% @routes.each do |route| %>
-   <%= link_to route_path(route) do %>
-   <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-    <div class="card-small">
-      <h4 class="card-small-name"><%= route.name %></h4>
-      <div class="card-small-info">
-        <%= link_to " Delete", route_path(route.id), method: 'delete', class: 'far fa-trash-alt' %>
-      </div>
+<div class="row">
+  <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+    <div class="form-card">
+      <div class="form-banner ">Your current routes:</div>
+
+      <% @routes.each do |route| %>
+      <ol>
+        <%= link_to route_path(route) do %>
+        <li><h4><%= route.name %><%= link_to "", route_path(route.id), method: 'delete', class: 'far fa-trash-alt' %></h4></li>
+        <% end %>
+      <% end %>
+      </ol>
+
     </div>
   </div>
-  <% end %>
-  <% end %>
 </div>

@@ -11,7 +11,7 @@ video#bgvideo {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(Page.jpeg) no-repeat;
+  background: url(../../assets/placeholder.png) no-repeat;
   background-size: cover;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -22,14 +22,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 // // Specific CSS for your home-page
-.wrapper-home{
+.wrapper-home {
     height: calc(100vh - 70px); /* 70px = navbar height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #title-home {
-  margin-top: 22vh;
+  margin-top: 16vh;
   height: 100%;
   color: #9999ff;
   display: flex;
@@ -42,23 +42,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 #title-home h1 {
   font-size: 5em;
   // text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  color: $accent;
+  color: $blue;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+  // text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
   // letter-spacing: -1px;
   // text-shadow: 1px 1px #9999ff;
   position: relative;
-  // text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
-#title-home h4{
- color: $white;
- text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+#tagline{
+ color: $accent;
+ text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
  margin-top: 3vh;
  font-family: 'Varela Round', sans-serif;
  font-size: 2em;
 }
 #login {
-  margin-top: 10vh;
+  margin-top: 18vh;
   height: 30%;
   display: flex;
   flex-direction: column;
@@ -69,14 +69,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 10px 0;
   width: 250px;
   //background-color: $accent;
-  background-color: $accent;
+  background-color: $blue;
   font-size: 1.2em;
   color: white;
-  border: 1px solid $accent !important;
+  border: 1px solid $blue !important;
   border-radius: 4px;
   box-shadow: 2px 3px 5px 0 rgba(0,0,0,0.5);
     &:hover {
-      background-color: #EF9400 !important;
+      background-color: rgb(52,144,235) !important;
       color: white !important;
     }
   }
@@ -88,10 +88,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 1.2em;
   background-color: rgba(255, 164, 0 ,0);
   color: white;
-  border: 2px solid $accent !important;
+  border: 2px solid $blue !important;
   border-radius: 4px;
   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
     &:hover {
-      background-color: rgba(239,148,0, 0.3) !important;
+      background-color: rgba(62,174,255, 0.3) !important;
     }
 }

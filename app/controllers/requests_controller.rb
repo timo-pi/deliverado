@@ -25,9 +25,10 @@ class RequestsController < ApplicationController
   end
 
   def nav
-
+    redirect_to request_nav_path
   end
 
   def view
+    @request = Request.find(params[:id])
   end
 end

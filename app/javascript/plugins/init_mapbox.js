@@ -24,6 +24,42 @@ const initMapbox = () => {
   fitMapToMarkers(map, markers);
   // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
 }
+
 };
+
+
+/*-------------- Start Navigation --------------*/
+function navigation(){
+  // initialize the map canvas to interact with later
+  const canvas = map.getCanvasContainer();
+
+  // an arbitrary start will always be the same
+  // only the end or destination will change
+  const start = [-122.662323, 45.523751];
+}
+
+// create a function to make a directions request
+function getRoute(end) {
+  // make a directions request using cycling profile
+  // an arbitrary start will always be the same
+  // only the end or destination will change
+  const start = [-122.662323, 45.523751];
+
+  var url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
 export { initMapbox };

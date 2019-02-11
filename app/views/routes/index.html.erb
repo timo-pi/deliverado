@@ -8,7 +8,13 @@
 
         <%= link_to route_path(route) do %>
 
-        <li> <div class="routes-flex"> <%= route.name %><%= link_to "", route_path(route.id), method: 'delete',class: 'far fa-trash-alt route-delete' %> </div></li>
+        <div class="routes-flex">
+        <div>
+          <li> <%= route.name %></li>
+          </div>
+            <div class="route-delete"><%= link_to "", route_path(route.id), method: 'delete',class: 'far fa-trash-alt fa-1x' %>
+            </div>
+      </div>
 
         <% end %>
       <% end %>

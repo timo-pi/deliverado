@@ -7,10 +7,10 @@
       <%= form_for :route, url: routes_path, method: :post do |f| %>
 
       <div class="form-group">
-        <%= f.label :delivery_radius, 'Enter the delivery radius:' %>
-        <div class="input-box">
+        <%= f.label :delivery_radius, 'Enter the delivery radius:', class: "input-label" %>
+
         <%= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
-        </div>
+
       </div>
       <%= f.hidden_field :name, value: params[:route][:name] %>
       <%= f.hidden_field :start_address, value: params[:route][:start_address] %>

@@ -14,5 +14,31 @@
 }
 .tooltip.top .tooltip-arrow {
   display: none;
+  list-style: none;
 }
 
+.form-card li {
+  // list-style: none;
+  padding-left: none;
+}
+
+.form-card ul {
+  padding-inline-start: 0;
+}
+
+.form-card a {
+  text-decoration: none;
+  color: $black;
+  white-space: nowrap;
+}
+
+.route-delete {
+  margin-left: 50px;
+}
+
+.btn-routes-index {
+  width: 100%;
+  display: flex;
+  margin-top: 12vh;
+  justify-content: flex-end;
+}

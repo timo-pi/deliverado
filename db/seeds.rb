@@ -35,7 +35,9 @@ test_request1 = Request.create!(order_number: "AE6734251",
                             time_from: DateTime.new(2019,2,5,18,0,0),
                             time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 1513849629",
-                            store: test_store1)
+                            store: test_store1,
+                            time_from: "16:00",
+                            time_to: "20:00")
 
 test_request2 = Request.create(order_number: "BD8402548",
                             name: "Stefan Raab",
@@ -46,7 +48,9 @@ test_request2 = Request.create(order_number: "BD8402548",
                             time_from: DateTime.new(2019,2,7,12,0,0),
                             time_to: DateTime.new(2019,2,7,21,0,0),
                             phone_number: "+49 176039276",
-                            store: test_store3)
+                            store: test_store3,
+                            time_from: "18:00",
+                            time_to: "19:30")
 
 test_request3 = Request.create(order_number: "TN48392664",
 
@@ -58,7 +62,9 @@ test_request3 = Request.create(order_number: "TN48392664",
                             time_from: DateTime.new(2019,2,6,17,0,0),
                             time_to: DateTime.new(2019,2,6,19,0,0),
                             phone_number: "+49 1508893765",
-                            store: test_store2)
+                            store: test_store2,
+                            time_from: "12:00",
+                            time_to: "20:30")
 
 test_request4 = Request.create!(order_number: "AE2352359",
                             name: "Tobias Jacob",

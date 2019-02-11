@@ -2,15 +2,17 @@
   <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
     <div class="form-card">
       <div class="form-banner ">Your current routes:</div>
-
+       <ol>
       <% @routes.each do |route| %>
-      <ol>
+
         <%= link_to route_path(route) do %>
-        <li><h4><%= route.name %><%= link_to "", route_path(route.id), method: 'delete', class: 'far fa-trash-alt' %></h4></li>
+        <li><%= route.name %><%= link_to "", route_path(route.id), method: 'delete',class: 'far fa-trash-alt route-delete' %></li>
         <% end %>
       <% end %>
       </ol>
-
+      <div class="btn-routes-index">
+      <%= button_to "New route", step_1_path, method: 'get', class: "btn btn-primary"  %>
+      </div>
     </div>
   </div>
 </div>

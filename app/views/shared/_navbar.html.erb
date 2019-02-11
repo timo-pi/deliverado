@@ -3,7 +3,7 @@
     <!-- Logo -->
     <%= link_to dashboard_path do %>
     <% if Delivery.where(user_id: current_user, status: 'accepted').present? %>
-    <div class="navbar-dot">
+    <div class="navbar-dot faa-burst animated">
     <p><%= Delivery.where(user_id: current_user, status: 'accepted').count%></p>
     </div>
     <% end %>

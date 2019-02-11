@@ -86,3 +86,17 @@
   border-top: 1px solid #E6E6E6;
 }
 
+.navbar-dot {
+  position: absolute;
+  padding: 1px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  line-height:18px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+}

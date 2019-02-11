@@ -1,0 +1,28 @@
+.howto {
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 4px #000000;
+}
+
+.howto h1 {
+  color: $blue;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  text-align: center;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.howto h4 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.howto-button {
+  text-align: center;
+  text-shadow: none;
+}
+
+.howto-left h4 {
+  text-align: left;
+}
+

@@ -20,6 +20,7 @@
 .form-card li {
   // list-style: none;
   padding-left: none;
+  padding-top: 8px;
 }
 
 .form-card ul {
@@ -39,6 +40,24 @@
 .btn-routes-index {
   width: 100%;
   display: flex;
-  margin-top: 12vh;
+  margin-top: 3vh;
+  justify-content: space-between;
+  color: white !important;
+}
+
+.btn-routes {
+  width: 100%;
+  display: flex;
+  margin-top: 3vh;
   justify-content: flex-end;
+  color: white !important;
+}
+
+.routes-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.form-btn {
+  margin-top: 10px;
+  min-width: 157px;
 }

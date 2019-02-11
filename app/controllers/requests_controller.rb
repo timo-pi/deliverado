@@ -23,4 +23,11 @@ class RequestsController < ApplicationController
       }
     end
   end
+
+  def nav
+
+  end
+
+  def view
+  end
 end

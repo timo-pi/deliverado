@@ -34,9 +34,9 @@
 <% if @request.status == "accepted" %>
  <div class="buttons">
 
-  <%= link_to "Sign", edit_delivery_path, class: "btn btn-primary"  %>
-    <p>or</p>
   <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
+    <p>or</p>
+  <%= link_to "Start Navigation", edit_delivery_path, class: "btn btn-primary"  %>
 </div>
 
 <% else %>

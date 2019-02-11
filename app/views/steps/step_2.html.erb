@@ -6,10 +6,10 @@
       <%= form_for :route, url: { action: "step_3"}, method: :get do |f| %>
 
       <div class="form-group">
-        <%= f.label :end_address, 'Work address:' %>
-        <div class="input-box">
-        <%= f.text_field :end_address, id: "flat_address" %>
-        </div>
+        <%= f.label :end_address, 'Work address:', class: "input-label" %>
+
+        <%= f.text_field :end_address, id: "flat_address", class: "input-box" %>
+
       </div>
       <%= f.hidden_field :name, value: params[:route][:name] %>
       <%= f.hidden_field :start_address, value: params[:route][:start_address] %>

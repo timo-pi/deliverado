@@ -60,6 +60,17 @@ test_request3 = Request.create(order_number: "TN48392664",
                             phone_number: "+49 1508893765",
                             store: test_store2)
 
+test_request4 = Request.create!(order_number: "AE2352359",
+                            name: "Tobias Jacob",
+                            delivery_address: "Böhmfelder Str. 4",
+                            city: "85122 Hofstetten",
+                            size: "L",
+                            message: "Danger. Washing machine",
+                            time_from: DateTime.new(2019,2,5,18,0,0),
+                            time_to: DateTime.new(2019,2,5,20,0,0),
+                            phone_number: "+49 23351723",
+                            store: test_store1)
+
 puts "Finished Requests!"
 
 puts 'Create routes'

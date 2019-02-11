@@ -1,35 +1,59 @@
+video#bgvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../../assets/placeholder.png) no-repeat;
+  background-size: cover;
+}
+
+
 // // Specific CSS for your home-page
-.wrapper-home{
+.wrapper-home {
     height: calc(100vh - 70px); /* 70px = navbar height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #title-home {
+  margin-top: 16vh;
   height: 100%;
   color: #9999ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),  image-url('Page.jpeg');
+  // background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),  image-url('Page.jpeg');
   background-size: cover;
   background-position: center;
 }
 #title-home h1 {
-  font-size: 50px;
+  font-size: 5em;
   // text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  color: $white;
-  font-weight: bold;
+  color: $blue;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  // text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
   letter-spacing: -1px;
   // text-shadow: 1px 1px #9999ff;
   position: relative;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
-#title-home h4{
- color: $white;
- text-shadow: 1px 1px 3px grey;
- margin-top: 50px;
+#tagline{
+ color: white;
+ text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+ margin-top: 3vh;
+ font-family: 'Varela Round', sans-serif;
+ font-size: 2em;
 }
 #login {
+  margin-top: 10vh;
   height: 30%;
   display: flex;
   flex-direction: column;
@@ -37,7 +61,32 @@
   align-items: center;
 }
 .btn-home {
-  padding: 10px 80px;
-  background-color: $accent;
-  color: black;
+  padding: 10px 0;
+  width: 250px;
+  //background-color: $accent;
+  background-color: $blue;
+  font-size: 1.2em;
+  color: white;
+  border: 1px solid $blue !important;
+  border-radius: 4px;
+  box-shadow: 2px 3px 5px 0 rgba(0,0,0,0.5);
+    &:hover {
+      background-color: rgb(52,144,235) !important;
+      color: white !important;
+    }
+  }
+
+.btn-home-about {
+  margin-top: 2vh;
+  padding: 10px 0;
+  width: 250px;
+  font-size: 1.2em;
+  background-color: rgba(255, 164, 0 ,0);
+  color: white;
+  border: 2px solid $blue !important;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+    &:hover {
+      background-color: rgba(62,174,255, 0.3) !important;
+    }
 }

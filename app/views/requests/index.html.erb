@@ -1,18 +1,5 @@
 <h3>Pending requests</h3>
 
-<!-- ~~~~~~~~~ filter ~~~~~~~~~-->
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-6">
-   <%= form_tag requests_path, method: :get, class: 'inline-form' do %>
-   <%= select_tag(
-    :query,
-    options_for_select(Request.pluck(:size).uniq),
-    class: "form-control", placeholder: "Choose size", prompt: 'Choose size' ) %>
-      <%= submit_tag("Filter", class: "btn full_btn") %>
-      <% end %>
-    </div>
-  </div>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <div class="row">
   <% @requests.each do |request| %>
   <%= link_to request_path(request) do %>

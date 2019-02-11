@@ -1,19 +1,32 @@
+
+
 <div class="wrapper-home">
-  <div id="title-home" class='text-center'>
-    <h1>deliverado</h1>
-    <h4>The eco-friendly delivery <br> service for your goods!</h4>
-  </div>
-  <!-- Login link (when logged out) -->
+  <div id="hero">
+    <video playsinline autoplay muted loop poster="../../assets/placeholder.png" id="bgvideo" width="x" height="y">
+      <source src="https://res.cloudinary.com/dvxyqhn8o/video/upload/v1549652845/deliverado-1.mp4" type="video/mp4">
+
+        <!-- <source src="https://res.cloudinary.com/dvxyqhn8o/video/upload/v1549739759/deliverado-berlin.mp4" type="video/mp4"> -->
+      </video>
+
+    <div id="title-home" class='text-center'>
+      <h1>deliverado</h1>
+      <p id="tagline">The eco-friendly delivery service! </p>
+    </div>
+    <!-- Login link (when logged out) -->
     <div id="login">
       <div class="col-md-4 text-center" >
         <div class="form-actions">
           <% if user_signed_in? %>
-           <%= link_to "SEE REQUESTS", requests_path, class: "btn btn-home btn-primary" %>
+          <%= link_to "See requests", requests_path, class: "btn btn-home btn-primary" %>
           <% else  %>
-            <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
-         <% end %>
+          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home faa-horizontal animated" %>
+          <% end %>
+          <div class="row">
+            <%= link_to "How it works", requests_path, class: "btn btn-home btn-home-about" %>
+          </div>
         </div>
         <a href="/users/sign_up"Sign up></a>
       </div>
+      </div>
     </div>
-</div>
+  </div>

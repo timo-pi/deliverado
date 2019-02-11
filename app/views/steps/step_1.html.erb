@@ -1,24 +1,52 @@
-<br>
-<div class="map_steps">
-  <%= render 'shared/maps' %>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="steps-form">
+<div class="row">
+  <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+    <div class="form-card">
+      <div class="form-banner ">1. Set up a commuter route. Enter a name and your home address:</div>
 
-        <%= form_for :route, url: { action: "step_2"}, method: :get do |f| %>
+      <%= form_for :route, url: { action: "step_2"}, method: :get do |f| %>
 
-        <div class="form-inputs">
-          <%= f.label :start_address, 'Enter your home address:' %>
-          <%= f.text_field :start_address, id: "flat_address" %>
-
+      <div class="form-group">
+        <%= f.label :name, 'Route Name:' %>
+        <div class="input-box">
+        <%= f.text_field :name %>
         </div>
-        <div class="form-actions">
-          <%= f.submit class: "btn full_btn"%>
-        </div>
-        <% end %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :start_address, 'Enter your home address:' %>
+        <%= f.text_field :start_address, id: "flat_address" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn btn-primary form-btn" %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
+
+
+<!--     <div class="row">
+      <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+        <div class="form-card">
+          <form action="http://www.deliverado.com" method="post">
+            <div class="form-banner deliverado">deliverado</div>
+            <div class="form-group">
+              <label for="first_name">First name</label>
+              <input type="text" class="form-control input-box" id="first_name" value="Timo">
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last name</label>
+              <input type="text" class="form-control input-box" id="last_name" value="Piechotta">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control input-box" id="email" value="timo@piechotta.net">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+ -->

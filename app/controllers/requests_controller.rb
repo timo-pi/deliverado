@@ -10,25 +10,15 @@ class RequestsController < ApplicationController
       @requests = @requests.where(size: params[:query]) # filer solar_system
     end
   end
-
-  def show
+   def show
     if user_signed_in?
       @request = Request.find(params[:id])
       authorize @request
       @markers = []
       @markers << {
-
         lng: @request.longitude,
         lat: @request.latitude
       }
     end
-  end
-
-  def nav
-    redirect_to request_nav_path
-  end
-
-  def view
-    @request = Request.find(params[:id])
   end
 end

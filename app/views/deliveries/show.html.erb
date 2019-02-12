@@ -36,8 +36,11 @@
 
 <% else %>
    <div class="buttons">
-    <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
-      <p>or</p>
-    <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary"  %>
+    <div class="go_back">
+      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
+    </div>
+    <div class="start_navigation">
+      <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary"  %>
+    </div>
   </div>
 <% end %>

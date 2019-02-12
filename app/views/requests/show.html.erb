@@ -32,19 +32,24 @@
 <%= render 'shared/maps' %>
 </div>
 <% if @request.status == "accepted" %>
- <div class="buttons">
-
-  <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
-    <p>or</p>
-  <%= link_to "Start Navigation", edit_delivery_path, class: "btn btn-primary"  %>
+<div class="buttons">
+  <div class="go_back">
+    <%= link_to "Go Back", dashboard_path, class: "btn btn-sec"  %>
+  </div>
+  <div class="start_navigation">
+    <%= link_to "Start Navigation", edit_delivery_path, class: "btn btn-primary"  %>
+  </div>
 </div>
 
 <% else %>
 <div class="buttons">
-  <%= link_to "Decline", requests_path, class: "btn btn-primary"  %>
-  <p>or</p>
+  <div class="decline">
+    <%= link_to "Decline", requests_path, class: "btn btn-sec"  %>
+  </div>
 
-  <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
+  <div class="accept">
+    <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
+  </div>
 </div>
 <% end %>
 

@@ -43,14 +43,14 @@ video#bgvideo {
   letter-spacing: -1px;
   // text-shadow: 1px 1px #9999ff;
   position: relative;
-  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  // text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 #tagline{
  color: white;
- text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+ // text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
  margin-top: 3vh;
  font-family: 'Varela Round', sans-serif;
- font-size: 2em;
+ font-size: 1.4em;
 }
 #login {
   margin-top: 10vh;

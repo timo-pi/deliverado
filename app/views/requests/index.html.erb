@@ -6,51 +6,21 @@
   <div class="col-xs-12 col-sm-6 col-md-6">
 
     <% if request.store.store_name.include? "MediaMarkt" %>
-      <div class="card-mediamarkt">
-        <div class="logo" style="background-image: url('<%= image_url "mediamarkt-logo.png" %>');background-size: cover;">
-        </div>
-        <div class="card-info">
-          <p id="store-address">
-            <%= request.store.store_address %>
-          </p>
-          <p id="address">
-
-
-            detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
-            <br>
-            delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
-          </p>
-
-          <div class="paket">
-            <% if request.size == "S"  %>
-            <%= request.size %>
-            <i class="fas fa-box"></i>
-            <% elsif request.size == "M"  %>
-            <%= request.size %>
-            <i class="fas fa-box size-m"></i>
-            <% elsif request.size == "L"  %>
-            <%= request.size %>
-            <i class="fas fa-box size-l"></i>
-            <% end %>
-          </div>
-        </div>
-      </div>
-
-
-    <% else %>
-    <div class="card-saturn">
-      <div class="logo" style="background-image: url('<%= image_url "saturn-logo.png" %>');background-size: cover;">
+    <div class="card-mediamarkt">
+      <div class="logo" style="background-image: url('<%= image_url "mediamarkt-logo.png" %>');background-size: cover;">
       </div>
       <div class="card-info">
         <p id="store-address">
-          <%= request.store.store_address %>
+          <%= request.store.store_address %>, <%= request.store.store_city %>
         </p>
         <p id="address">
 
-            detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
-            <br>
-            delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
-          </p>
+
+          detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
+          <br>
+          delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
+        </p>
+
         <div class="paket">
           <% if request.size == "S"  %>
           <%= request.size %>
@@ -65,7 +35,37 @@
         </div>
       </div>
     </div>
-<% end %>
+
+
+    <% else %>
+    <div class="card-saturn">
+      <div class="saturn-logo" style="background-image: url('<%= image_url "saturn-logo_new.png" %>');background-size: cover;">
+      </div>
+      <div class="card-info">
+        <p id="store-address">
+          <%= request.store.store_address %>, <%= request.store.store_city %>
+        </p>
+        <p id="address">
+
+          detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
+          <br>
+          delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
+        </p>
+        <div class="paket">
+          <% if request.size == "S"  %>
+          <%= request.size %>
+          <i class="fas fa-box"></i>
+          <% elsif request.size == "M"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-m"></i>
+          <% elsif request.size == "L"  %>
+          <%= request.size %>
+          <i class="fas fa-box size-l"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
   <% end %>
   <% end %>

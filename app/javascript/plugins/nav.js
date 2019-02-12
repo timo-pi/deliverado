@@ -30,12 +30,19 @@ function nav(){
     accessToken:  mapboxgl.accessToken,
     unit: 'metric',
     interactive: false,
-    controls: {
+    conxtrols: {
       inputs: false,
     },
   })
-  mapNav.setDestination([11.386232, 48.747116 ])
-  mapNav.setOrigin([11.6021119, 48.1400201])
+  const orgLng = markers[0].lng;
+  const orgLat  =   markers[0].lat;
+  const wayLng = markers[1].lng;
+  const wayLat  = markers[1].lat;
+  const desLng = markers[2].lng;
+  const desLat  = markers[2].lat;
+  mapNav.setDestination([ desLng, desLat ])
+  mapNav.setOrigin([ orgLng, orgLat])
+  mapNav.setWaypoint(0, [wayLng, wayLat]);
   map.addControl(mapNav, 'top-left');
 };
 };

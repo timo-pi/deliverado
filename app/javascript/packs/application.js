@@ -10,3 +10,4 @@ import { init_slider } from "../plugins/slider.js";
 initMapbox();
 initAutocomplete();
 init_slider("#route_radius");
+hide_address();

@@ -1,4 +1,3 @@
-<div>
 <div class="wrapper-home">
   <div id="hero">
     <video playsinline autoplay muted loop poster="../../assets/placeholder.png" id="bgvideo" width="x" height="y">
@@ -21,6 +20,7 @@
           <% else  %>
           <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home faa-horizontal animated" %>
           <% end %>
+
          <!-- <div class="row">
             <%#= link_to "About deliverado", about_path, class: "btn btn-home-about" %>
           </div> -->
@@ -29,4 +29,35 @@
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row">
+
+    <div class="col-xs-12 col-md-6">
+      <div class="home-icon" id="register-icon">
+       <h4>1. Register as a driver</h4>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="home-icon" id="route-icon">
+        <h4>2. Enter your commuter routes</h4>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="home-icon" id="order-icon">
+        <h4>3. Select a delivery request</h4>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="home-icon" id="money-icon">
+        <h4>4. Earn money with every delivery</h4>
+      </div>
+    </div>
+    </div>
+
+<!-- slow down the video -->
+<script>
+ var vid = document.getElementById("bgvideo");
+ vid.playbackRate = 0.4;
+</script>
+
+

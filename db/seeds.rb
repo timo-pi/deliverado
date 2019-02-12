@@ -27,7 +27,7 @@ puts "Finished Stores!"
 puts 'Create requests'
 Request.destroy_all
 test_request1 = Request.create!(order_number: "AE6734251",
-                            name: "Oliver Pocher",
+                            name: "Franz Huber",
                             delivery_address: "Gaimersheimer Str. 3",
                             city: "85098 Ingolstadt",
                             size: "M",
@@ -40,7 +40,7 @@ test_request1 = Request.create!(order_number: "AE6734251",
                             time_to: "20:00")
 
 test_request2 = Request.create(order_number: "BD8402548",
-                            name: "Stefan Raab",
+                            name: "Stefan Mustermann",
                             delivery_address: "Prinzregentenstr. 74",
                             city: "81675 München",
                             size: "S",
@@ -79,25 +79,26 @@ test_request4 = Request.create!(order_number: "AE2352359",
 
 puts "Finished Requests!"
 
-# für signature
-User.find_by(email: "kali@live.de").destroy
+# Testuser
+puts 'Create Testuser'
+User.destroy_all
 user_new = User.create!(
-  email: "kali@live.de",
-  password: "1234567",
-  first_name: "Hans",
-  last_name: "Peter")
+  email: "timo@gmail.com",
+  password: "123456",
+  first_name: "Timo",
+  last_name: "Piechotta")
+puts "Finished User timo@gmail.com / 123456"
+# puts 'Create routes'
+# Route.destroy_all
+# test_route1 = Route.create!(start_address: "Eriagstr. 28, Ingolstadt",
+#                           end_address: "Von-Reisbachstr. 24, Mainburg",
+#                           delivery_radius: 8,
+#                           name: "Testroute",
+#                           user: user_new)
+# puts "Finished Routes!"
 
-puts 'Create routes'
-Route.destroy_all
-test_route1 = Route.create!(start_address: "Eriagstr. 28, Ingolstadt",
-                          end_address: "Von-Reisbachstr. 24, Mainburg",
-                          delivery_radius: 8,
-                          name: "Testroute",
-                          user: user_new)
-puts "Finished Routes!"
-
-Delivery.destroy_all
-Delivery.create!(status: 1,
-    request: test_request1,
-    user: user_new)
-puts "create new Delivery"
+# Delivery.destroy_all
+# Delivery.create!(status: 1,
+#     request: test_request1,
+#     user: user_new)
+# puts "create new Delivery"

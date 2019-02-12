@@ -2,6 +2,9 @@ class StepsController < ApplicationController
   def step_1
     authorize :step, :step_1?
     @route = Route.new
+    if Route.where(user: current_user.id).blank?
+      flash[:alert] = "No commuter route found"
+    end
     # first_result = Geocoder.search("Ingolstadt")
     # @markers = []
     # @markers << {

@@ -5,13 +5,13 @@ video#bgvideo {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: 100%;
+  height: auto;
   z-index: -100;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(../../assets/placeholder.png) no-repeat;
+  background: url(placeholder.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -121,20 +121,20 @@ video#bgvideo {
 
 #register-icon {
 
-background-image: url("deliverado-register.png");
+background-image: asset-url("deliverado-register.png");
 
 
 }
 #route-icon {
-background-image: url("deliverado-route.png");
+background-image: asset-url("deliverado-route.png");
 
 }
 #order-icon {
-  background-image: url("deliverado-order.png");
+  background-image: asset-url("deliverado-order.png");
 
 }
 #money-icon {
-  background-image: url("deliverado-money.png");
+  background-image: asset-url("deliverado-money.png");
 
 }
 

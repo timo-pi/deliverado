@@ -8,7 +8,17 @@
       <div class="form-group">
         <%= f.label :delivery_radius, 'Enter the delivery radius:', class: "input-label" %>
 
-        <%= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
+        <%#= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
+        <input type="text" id="delivery_radius" value="">
+
+        <%= f.range_field :delivery_radius, :min=>1, :max=>20, :id=>"delivery_radius", :onchange=>"updateTextInput(this.value)"%>
+
+        <!-- <input type="range" name="delivery_radius" min="0" max="20" onchange="updateTextInput(this.value);"> -->
+
+<script> function updateTextInput(val) {
+          document.getElementById('delivery_radius').value=val;
+        }
+</script>
 
       </div>
       <%= f.hidden_field :name, value: params[:route][:name] %>

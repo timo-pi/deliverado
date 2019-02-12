@@ -44,6 +44,7 @@ class DeliveriesController < ApplicationController
       }
     ]
      @markers.flatten!
+     render layout: "fullscreen"
   end
 
 end

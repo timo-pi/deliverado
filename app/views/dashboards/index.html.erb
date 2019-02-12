@@ -1,6 +1,4 @@
 <h3>Accepted delivery orders:</h3>
-
-
 <div class="row">
   <% @my_deliveries.each do |delivery| %>
   <%= link_to delivery_path(delivery) do %>
@@ -31,8 +29,6 @@
         </div>
       </div>
     </div>
-
-
     <% else %>
     <div class="card-saturn">
       <div class="logo" style="background-image: url('<%= image_url "saturn-logo.png" %>');background-size: cover;">
@@ -62,7 +58,6 @@
         </div>
       </div>
     </div>
-
     <% end %>
   </div>
   <% end %>

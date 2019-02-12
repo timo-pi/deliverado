@@ -1,0 +1,45 @@
+<h3>Order information for:</h3>
+<p><%= @delivery.request.order_number %></p>
+
+
+<div class="all">
+  <div class="top">
+    <div class="left">
+      <h5>Store</h5>
+      <i class="fas fa-store-alt" style="font-size: 25px"></i>
+    </div>
+    <div class="right">
+      <p><%= @delivery.request.store.store_name %></p>
+      <p><%= @delivery.request.store.store_address %></p>
+      <p><%= @delivery.request.store.store_city %></p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="left">
+      <h5>Customer</h5>
+      <i class="fas fa-phone-square phone" style="font-size: 33px"></i>
+    </div>
+    <div class="right">
+      <p class="first_line"><%= @delivery.request.name %></p>
+      <p><%= @delivery.request.delivery_address %></p>
+      <p><%= @delivery.request.city %></p>
+      <p><%= @delivery.request.phone_number %></p>
+    </div>
+  </div>
+</div>
+<div class="map_request_show">
+<%= render 'shared/maps' %>
+</div>
+ <% if @delivery.status == "delivered" %>
+    <br><p>Signature: </p>
+    <%= image_tag @delivery.signature, class: "signature" %>
+</div>
+
+<% else %>
+<div class="buttons">
+  <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
+      <p>or</p>
+  <%= link_to "Sign", edit_delivery_path, class: "btn btn-primary"  %>
+</div>
+<% end %>

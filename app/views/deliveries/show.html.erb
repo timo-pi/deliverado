@@ -13,7 +13,6 @@
       <p><%= @delivery.request.store.store_city %></p>
     </div>
   </div>
-
   <div class="bottom">
     <div class="left">
       <h5>Customer</h5>
@@ -35,6 +34,7 @@
     <%= image_tag @delivery.signature, class: "signature" %>
 </div>
 
+<% if @delivery.request.status == "accepted" %>
 <% else %>
    <div class="buttons">
     <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>

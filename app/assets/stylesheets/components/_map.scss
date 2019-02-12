@@ -12,3 +12,7 @@
 .map_routes {
   height: 400px;
 }
+.mapbox {
+  max-height: 20vh !important;
+  box-sizing: border-box;
+}

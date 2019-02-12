@@ -26,11 +26,11 @@ function nav(){
   });
   fitMapToMarkers(map, markers);
   // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
-  const mapNav = new MapboxDirections({
+  const mapNavi = new MapboxDirections({
     accessToken:  mapboxgl.accessToken,
     unit: 'metric',
     interactive: false,
-    conxtrols: {
+    controls: {
       inputs: false,
     },
   })
@@ -40,10 +40,12 @@ function nav(){
   const wayLat  = markers[1].lat;
   const desLng = markers[2].lng;
   const desLat  = markers[2].lat;
-  mapNav.setDestination([ desLng, desLat ])
-  mapNav.setOrigin([ orgLng, orgLat])
-  mapNav.setWaypoint(0, [wayLng, wayLat]);
-  map.addControl(mapNav, 'top-left');
+
+    mapNavi.setDestination([ desLng, desLat ])
+    mapNavi.setOrigin([ orgLng, orgLat])
+    mapNavi.setWaypoint(0, [wayLng, wayLat]);
+    map.addControl(mapNavi, 'top-left');
+
 };
 };
 

@@ -850,14 +850,14 @@
 
 @keyframes burst {
   0% {
-    opacity: .6;
+    opacity: 0;
   }
 
   50% {
-    -webkit-transform: scale(1.8);
-    -ms-transform: scale(1.8);
-    transform: scale(1.8);
-    opacity: 0;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
   }
 
   100% {

@@ -9,6 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-wagon-red {
@@ -78,7 +81,7 @@
   height: 10px;
   width: 10px;
   position: absolute;
-  left: 10px;
+  right: 10px;
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
@@ -86,3 +89,17 @@
   border-top: 1px solid #E6E6E6;
 }
 
+.navbar-dot {
+  position: absolute;
+  padding: 1px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  line-height:18px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+}

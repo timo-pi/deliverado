@@ -14,12 +14,13 @@
             <%= request.store.store_address %>
           </p>
           <p id="address">
-            <%= request.name %>
+
+
+            detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
             <br>
-            <%= request.delivery_address %>
-            <br>
-            <%= request.city %>
+            delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
           </p>
+
           <div class="paket">
             <% if request.size == "S"  %>
             <%= request.size %>
@@ -45,12 +46,11 @@
           <%= request.store.store_address %>
         </p>
         <p id="address">
-          <%= request.name %>
-          <br>
-          <%= request.delivery_address %>
-          <br>
-          <%= request.city %>
-        </p>
+
+            detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
+            <br>
+            delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
+          </p>
         <div class="paket">
           <% if request.size == "S"  %>
           <%= request.size %>
@@ -66,8 +66,6 @@
       </div>
     </div>
 <% end %>
-
-
   </div>
   <% end %>
   <% end %>
@@ -75,13 +73,3 @@
 
 
 
-
-
-<!-- <div class="row justify-content-around">
-    <div class="col-4">
-      One of two columns
-    </div>
-    <div class="col-4">
-      One of two columns
-    </div>
-  </div> -->

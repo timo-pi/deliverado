@@ -1,31 +1,32 @@
-
 <div class="row">
-  <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
-    <div class="form-card">
-      <div class="form-banner ">3. How far you are willing to deviate from your route for deliveries?</div>
+  <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
+      <div class="form-banner ">3. How far you are willing to deviate from your route for deliveries?</div>
+      <div class="form-card">
       <%= form_for :route, url: routes_path, method: :post do |f| %>
 
       <div class="form-group">
-        <%= f.label :delivery_radius, 'Enter the delivery radius:' %>
-        <div class="input-box">
+        <%= f.label :delivery_radius, 'Enter the delivery radius:', class: "input-label" %>
+
         <%= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
-        </div>
+
       </div>
       <%= f.hidden_field :name, value: params[:route][:name] %>
       <%= f.hidden_field :start_address, value: params[:route][:start_address] %>
       <%= f.hidden_field :end_address, value: params[:route][:end_address] %>
-
       <div class="form-actions">
+        <div class="btn-routes">
         <%= f.button :submit, class: "btn btn-primary form-btn" %>
       </div>
+      </div>
+
       <% end %>
     </div>
   </div>
 </div>
 <!-- Map -->
 <div class="row">
-  <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+  <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <div class="map_steps">
       <%= render 'shared/maps' %>
     </div>

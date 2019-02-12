@@ -14,5 +14,51 @@
 }
 .tooltip.top .tooltip-arrow {
   display: none;
+  list-style: none;
 }
 
+.form-card li {
+  // list-style: none;
+  padding-left: none;
+  padding-top: 8px;
+}
+
+.form-card ul {
+  padding-inline-start: 0;
+}
+
+.form-card a {
+  text-decoration: none;
+  color: $black;
+  white-space: nowrap;
+}
+
+.route-delete {
+  margin-right: 20px;
+}
+
+.btn-routes-index {
+  width: 100%;
+  display: flex;
+  margin-top: 3vh;
+  justify-content: space-between;
+  color: white !important;
+}
+
+.btn-routes {
+  width: 100%;
+  display: flex;
+  margin-top: 3vh;
+  justify-content: flex-end;
+  color: white !important;
+}
+
+.routes-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.form-btn {
+  margin-top: 10px;
+  min-width: 157px;
+}

@@ -3,7 +3,7 @@
 
 <div class="row">
   <% @my_deliveries.each do |delivery| %>
-  <%= link_to request_path(delivery.request) do %>
+  <%= link_to delivery_path(delivery) do %>
   <div class="col-xs-12 col-sm-6 col-md-6">
 
     <% if delivery.request.store.store_name.include? "MediaMarkt" %>

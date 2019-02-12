@@ -39,10 +39,6 @@ class DeliveriesController < ApplicationController
     @markers = []
     @markers << [
       {
-        lng: routes.start_longitude,
-        lat: routes.start_latitude
-      },
-      {
         lng: @delivery.request.longitude,
         lat: @delivery.request.latitude
       }, {

@@ -3,7 +3,9 @@ class RequestsController < ApplicationController
 
   def index
     # Redirect to step_1 if no route exists -> this slows down the landingpage video loading... why???
-
+    if Route.where(user: current_user.id).blank?
+      flash[:alert] = "No commuter route found - please create a route"
+    end
     # if !current_user.routes.first
     @requests = policy_scope(Request)
     if Route.where(user: current_user.id).blank?

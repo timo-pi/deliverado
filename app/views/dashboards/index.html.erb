@@ -1,5 +1,4 @@
-<% raise %>
-<%= if @my_deliveries.where.not(status: 'delivered').exist? %>
+<% if @my_deliveries.where.not(status: 'delivered').exists? %>
 <h3>Accepted delivery orders:</h3>
 <% end %>
 <div class="row">
@@ -68,8 +67,9 @@
   <% end %>
 </div>
 
-
+<% if @my_deliveries.where(status: 'delivered').exists? %>
 <h3>Finished delivery orders:</h3>
+<% end %>
 <div class="row">
   <% @my_deliveries.where(status: 'delivered').each do |delivery| %>
   <%= link_to delivery_path(delivery.id) do %>

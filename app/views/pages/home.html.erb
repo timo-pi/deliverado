@@ -11,7 +11,7 @@
       <p id="tagline">The eco-friendly same day delivery service! </p>
     </div>
             <!-- Login link (when logged out) -->
-    <div id="login">
+    <div class="login">
       <div class="col-md-4 text-center" >
         <div class="form-actions">
           <% if user_signed_in? %>
@@ -32,27 +32,43 @@
 
   <div class="col-xs-12 col-md-6">
     <div class="home-icon" id="register-icon">
-     <h4>1. Register as a driver</h4>
+     <h3>1. Register as a driver</h3>
    </div>
   </div>
  <div class="col-xs-12 col-md-6">
   <div class="home-icon" id="route-icon">
-    <h4>2. Enter your commuter routes</h4>
+    <h3>2. Enter your commuter routes</h3>
   </div>
 </div>
   <div class="col-xs-12 col-md-6">
     <div class="home-icon" id="order-icon">
-      <h4>3. Select a delivery request</h4>
+      <h3>3. Select a delivery request</h3>
     </div>
   </div>
   <div class="col-xs-12 col-md-6">
     <div class="home-icon" id="money-icon">
-      <h4>4. Earn money with every delivery</h4>
+      <h3>4. Earn money with every delivery</h3>
     </div>
   </div>
 </div>
 
+
 </div>
+
+    <div class="login">
+      <div class="col-md-4 text-center" >
+        <div class="form-actions">
+          <% if user_signed_in? %>
+
+          <% else  %>
+          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home faa-horizontal animated" %>
+          <% end %>
+         <div class="row">
+            <%= link_to "About deliverado", about_path %>
+          </div>
+        </div>
+      </div>
+    </div>
 <!-- slow down the video -->
 <script>
  var vid = document.getElementById("bgvideo");

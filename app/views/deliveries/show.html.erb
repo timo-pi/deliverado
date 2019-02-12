@@ -34,7 +34,6 @@
     <%= image_tag @delivery.signature, class: "signature" %>
 </div>
 
-<% if @delivery.request.status == "accepted" %>
 <% else %>
    <div class="buttons">
     <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>

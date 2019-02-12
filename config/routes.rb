@@ -19,5 +19,4 @@ Rails.application.routes.draw do
       get "nav"
     end
   end
-
 end

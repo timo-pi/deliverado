@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   end
   resources :routes, only: [:create, :index, :show, :destroy]
   resources :stores, only: [:index]
-  resources :deliveries, only: [:update, :edit, :show]
-
+  resources :deliveries, only: [:update, :edit, :show] do
+    member do
+      get "nav"
+    end
+  end
 end

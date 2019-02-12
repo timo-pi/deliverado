@@ -1,7 +1,6 @@
 <h3>Order information for:</h3>
 <p><%= @delivery.request.order_number %></p>
 
-
 <div class="all">
   <div class="top">
     <div class="left">
@@ -37,9 +36,9 @@
 </div>
 
 <% else %>
-<div class="buttons">
-  <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
+   <div class="buttons">
+    <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
       <p>or</p>
-  <%= link_to "Sign", edit_delivery_path, class: "btn btn-primary"  %>
-</div>
+    <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary"  %>
+  </div>
 <% end %>

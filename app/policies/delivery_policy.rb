@@ -9,15 +9,19 @@ class DeliveryPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def edit?
+    show?
+  end
+
   def create?
     true
   end
 
-  def edit?
-    record.user == user
-  end
-
   def update?
     edit?
+  end
+
+  def nav?
+    show?
   end
 end

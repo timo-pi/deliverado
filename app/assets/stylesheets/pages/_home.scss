@@ -5,7 +5,7 @@ video#bgvideo {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
   z-index: -100;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
@@ -99,4 +99,46 @@ video#bgvideo {
       background-color: rgba(62,174,255, 0.4);
       color: white;
     }
+}
+
+.home-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255,255,255, .8);
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center 15%;
+
+  text-align: center;
+  padding: 75% 3% 5% 3%;
+  color: $blue !important;
+
+}
+
+#register-icon {
+
+background-image: url("deliverado-register.png");
+
+
+}
+#route-icon {
+background-image: url("deliverado-route.png");
+
+}
+#order-icon {
+  background-image: url("deliverado-order.png");
+
+}
+#money-icon {
+  background-image: url("deliverado-money.png");
+
+}
+
+.white-wrapper {
+
+
 }

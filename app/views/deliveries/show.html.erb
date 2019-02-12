@@ -27,19 +27,18 @@
   </div>
 </div>
 <div class="map_request_show">
-  <%= render 'shared/maps' %>
+<%= render 'shared/maps' %>
 </div>
+ <% if @delivery.status == "delivered" %>
+    <br><p>Signature: </p>
+    <%= image_tag @delivery.signature, class: "signature" %>
+</div>
+
 <% if @delivery.request.status == "accepted" %>
+<% else %>
    <div class="buttons">
     <%= link_to "Go Back", dashboard_path, class: "btn btn-primary"  %>
       <p>or</p>
     <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary"  %>
   </div>
-  <% else %>
-  <div class="buttons">
-    <%= link_to "Decline", requests_path, class: "btn btn-primary"  %>
-      <p>or</p>
-    <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
-  </div>
 <% end %>
-

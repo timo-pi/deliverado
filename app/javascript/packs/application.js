@@ -12,4 +12,5 @@ import { nav } from "../plugins/nav.js";
 initMapbox();
 initAutocomplete();
 init_slider("#route_radius");
+hide_address();
 nav();

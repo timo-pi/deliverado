@@ -79,23 +79,25 @@ test_request4 = Request.create!(order_number: "AE2352359",
 
 puts "Finished Requests!"
 
-puts 'Create routes'
-Route.destroy_all
-test_route1 = Route.create(start_address: "Eriagstr. 28, Ingolstadt",
-                          end_address: "Von-Reisbachstr. 24, Mainburg",
-                          delivery_radius: 8,
-                          name: "Testroute",
-                          user_id: 1)
-puts "Finished Routes!"
-
 # für signature
-user_new = User.create(
+User.find_by(email: "kali@live.de").destroy
+user_new = User.create!(
   email: "kali@live.de",
   password: "1234567",
   first_name: "Hans",
-  last_name: "peter")
+  last_name: "Peter")
 
-Delivery.create(status: 1,
+puts 'Create routes'
+Route.destroy_all
+test_route1 = Route.create!(start_address: "Eriagstr. 28, Ingolstadt",
+                          end_address: "Von-Reisbachstr. 24, Mainburg",
+                          delivery_radius: 8,
+                          name: "Testroute",
+                          user: user_new)
+puts "Finished Routes!"
+
+Delivery.destroy_all
+Delivery.create!(status: 1,
     request: test_request1,
     user: user_new)
 puts "create new Delivery"

@@ -17,6 +17,10 @@ class DeliveryPolicy < ApplicationPolicy
     true
   end
 
+  def update?
+    edit?
+  end
+
   def nav?
     show?
   end

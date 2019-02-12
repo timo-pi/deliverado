@@ -9,4 +9,4 @@ const init_slider = (id) => {
     }
   });
 }
-export { init_slider }
+export { init_slider };

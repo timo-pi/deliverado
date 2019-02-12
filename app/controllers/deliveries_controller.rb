@@ -1,11 +1,6 @@
 class DeliveriesController < ApplicationController
-  def update
-  end
+  before_action :set_delivery, only: [:show, :edit, :update, :nav]
 
-  def edit
-    @delivery = Delivery.find_by(request_id: params[:id])
-    authorize @delivery
-  end
   def create
     @delivery = Delivery.new
     @delivery.user_id = current_user.id
@@ -16,7 +11,52 @@ class DeliveriesController < ApplicationController
     if @delivery.save
       redirect_to requests_path
     else
-      raise
     end
+  end
+
+  def show
+    @markers = []
+    @markers << {
+
+      lng: @delivery.request.longitude,
+      lat: @delivery.request.latitude
+    }
+  end
+
+  def edit
+  end
+
+  def update
+    if @delivery.update(signature: params[:delivery][:signature], status: "delivered")
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
+  end
+
+  def nav
+    routes = @delivery.user.routes.first
+    @markers = []
+    @markers << [
+      {
+        lng: routes.start_longitude,
+        lat: routes.start_latitude
+      },
+      {
+        lng: @delivery.request.longitude,
+        lat: @delivery.request.latitude
+      }, {
+        lng: routes.end_longitude,
+        lat: routes.end_latitude
+      }
+    ]
+     @markers.flatten!
+  end
+
+  private
+
+  def set_delivery
+    @delivery = Delivery.find(params[:id])
+    authorize @delivery
   end
 end

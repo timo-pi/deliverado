@@ -8,7 +8,7 @@ function nav(){
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 100, maxZoom: 14 });
+    map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
   };
   if (mapElement){ // only build a map if there's a div#map to inject into
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -32,17 +32,27 @@ function nav(){
         inputs: false,
       },
     })
-    const orgLng  = markers[0].lng;
-    const orgLat  = markers[0].lat;
-    const wayLng  = markers[1].lng;
-    const wayLat  = markers[1].lat;
-    const desLng  = markers[2].lng;
-    const desLat  = markers[2].lat;
+    const orgLng  = markers[1].lng;
+    const orgLat  = markers[1].lat;
+    // const wayLng  = markers[1].lng;
+    // const wayLat  = markers[1].lat;
+    const desLng  = markers[0].lng;
+    const desLat  = markers[0].lat;
+      mapNavi.setDestination([ desLng, desLat ])
+      mapNavi.setOrigin([ orgLng, orgLat])
 
-    mapNavi.setDestination([ desLng, desLat ])
-    mapNavi.setOrigin([ orgLng, orgLat])
-    mapNavi.setWaypoint(0, [wayLng, wayLat]);
-    map.addControl(mapNavi, 'top-left');
-  };
+      map.addControl(mapNavi, 'top-left');
+    // mapNavi.setWaypoint(0, [wayLng, wayLat]);
+
+  map.on('load', () => {
+  const anything = document.querySelector('.mapbox-directions-step')
+  let event = new MouseEvent('mouseover',{
+    view: window,
+  })
+  anything.dispatchEvent(event);
+  });
+
+};
 };
 export { nav };
+

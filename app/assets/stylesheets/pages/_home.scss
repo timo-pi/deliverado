@@ -24,7 +24,7 @@ video#bgvideo {
     justify-content: space-between;
 }
 #title-home {
-  margin-top: 16vh;
+  margin-top: 14vh;
   height: 100%;
   color: #9999ff;
   display: flex;
@@ -52,13 +52,14 @@ video#bgvideo {
  font-family: 'Varela Round', sans-serif;
  font-size: 1.4em;
 }
-#login {
+.login {
   margin-top: 10vh;
   height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .btn-home {
   padding: 10px 0;

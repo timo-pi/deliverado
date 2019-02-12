@@ -13,6 +13,7 @@
         <p id="store-address">
           <%= delivery.request.store.store_address %>
         </p>
+        <p id="card-name"><%= delivery.request.name %><br>in <%= delivery.request.city %></p>
           <p id="address">
             delivery between <%= delivery.request.time_from.strftime("%H:%M") %> - <%= delivery.request.time_to.strftime("%H:%M") %>
           </p>
@@ -40,13 +41,10 @@
         <p id="store-address">
           <%= delivery.request.store.store_address %>
         </p>
-        <p id="address">
-          <%= delivery.request.name %>
-          <br>
-          <%= delivery.request.delivery_address %>
-          <br>
-          <%= delivery.request.city %>
-        </p>
+        <p id="card-name"><%= delivery.request.name %><br>in <%= delivery.request.city %></p>
+          <p id="address">
+            delivery between <%= delivery.request.time_from.strftime("%H:%M") %> - <%= delivery.request.time_to.strftime("%H:%M") %>
+          </p>
         <div class="paket">
           <% if delivery.request.size == "S"  %>
           <%= delivery.request.size %>
@@ -84,8 +82,9 @@
         <p id="store-address">
           <%= delivery.request.store.store_address %>
         </p>
+        <p id="card-name"><%= delivery.request.name %><br>in <%= delivery.request.city %></p>
           <p id="address">
-            delivery between <%= delivery.request.time_from.strftime("%H:%M") %> - <%= delivery.request.time_to.strftime("%H:%M") %>
+            delivered on <%= delivery.request.updated_at.strftime("%d.%m.%Y %k:%M") %>
           </p>
         <div class="paket">
           <% if delivery.request.size == "S"  %>
@@ -111,13 +110,10 @@
         <p id="store-address">
           <%= delivery.request.store.store_address %>
         </p>
-        <p id="address">
-          <%= delivery.request.name %>
-          <br>
-          <%= delivery.request.delivery_address %>
-          <br>
-          <%= delivery.request.city %>
-        </p>
+        <p id="card-name"><%= delivery.request.name %><br>in <%= delivery.request.city %></p>
+          <p id="address">
+            delivered on <%= delivery.request.updated_at.strftime("%d.%m.%Y %k:%M") %>
+          </p>
         <div class="paket">
           <% if delivery.request.size == "S"  %>
           <%= delivery.request.size %>

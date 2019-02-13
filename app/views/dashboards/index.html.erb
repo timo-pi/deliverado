@@ -85,7 +85,7 @@
         </p>
         <p id="card-name"><%= delivery.request.name %><br>in <%= delivery.request.city %></p>
           <p id="address">
-            delivered on <%= delivery.request.updated_at.strftime("%d.%m.%Y %k:%M") %>
+            delivered on <%= delivery.updated_at.strftime("%d.%m.%Y %k:%M") %>
           </p>
         <div class="paket">
           <% if delivery.request.size == "S"  %>

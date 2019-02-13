@@ -8,11 +8,11 @@
   font-size: 1.2em;
 }
 video#bgvideo {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   width: auto;
   height: auto;
   z-index: -100;
@@ -32,7 +32,7 @@ video#bgvideo {
     justify-content: space-between;
 }
 #title-home {
-  margin-top: 14vh;
+  margin-top: 10vh;
   height: 100%;
   color: #9999ff;
   display: flex;

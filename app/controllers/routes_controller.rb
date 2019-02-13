@@ -7,13 +7,15 @@ class RoutesController < ApplicationController
     @markers = @routes.map do |route|
       {
         lng: route.start_longitude,
-        lat: route.start_latitude
+        lat: route.start_latitude,
+        infoWindow: "Home address"
       }
     end
     @routes.map do |route|
       @markers << {
         lng: route.end_longitude,
-        lat: route.end_latitude
+        lat: route.end_latitude,
+        infoWindow: "Work address"
       }
     end
   end

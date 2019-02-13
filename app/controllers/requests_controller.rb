@@ -27,7 +27,8 @@ class RequestsController < ApplicationController
       @markers = []
       @markers << {
         lng: @request.longitude,
-        lat: @request.latitude
+        lat: @request.latitude,
+        infoWindow: "Customer address"
       }
     end
   end

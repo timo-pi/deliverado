@@ -30,6 +30,11 @@
 <%= render 'shared/maps' %>
 </div>
  <% if @delivery.status == "delivered" %>
+    <div class="buttons">
+    <div class="go_back">
+      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
+    </div>
+  </div>
     <br><p>Signature: </p>
     <%= image_tag @delivery.signature, class: "signature" %>
 </div>

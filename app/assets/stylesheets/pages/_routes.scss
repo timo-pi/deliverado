@@ -51,6 +51,7 @@
 }
 .form-btn {
   margin-top: 10px;
+  border-radius: 5px;
   // min-width: 157px;
 }
 #range-pos {
@@ -65,4 +66,11 @@
 .flex-container {
   display: flex;
   justify-content: center;
+}
+
+.btn-blue-outline {
+  border-radius: 5px;
+  border: 1px solid #569CFC;
+  background-color: white;
+  color: #569CFC
 }

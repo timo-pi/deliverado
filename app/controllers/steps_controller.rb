@@ -22,7 +22,8 @@ class StepsController < ApplicationController
       @markers << {
 
         lng: result.first.coordinates.second,
-        lat: result.first.coordinates.first
+        lat: result.first.coordinates.first,
+        infoWindow: "Home Address"
       }
     end
   end
@@ -37,13 +38,15 @@ class StepsController < ApplicationController
       @markers << {
 
         lng: result_start.first.coordinates.second,
-        lat: result_start.first.coordinates.first
+        lat: result_start.first.coordinates.first,
+        infoWindow: "Home Address"
       }
       result_end = Geocoder.search(params[:route][:end_address])
       @markers << {
 
         lng: result_end.first.coordinates.second,
-        lat: result_end.first.coordinates.first
+        lat: result_end.first.coordinates.first,
+        infoWindow: "Work Address"
       }
     end
   end

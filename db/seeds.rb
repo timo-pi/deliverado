@@ -88,6 +88,19 @@ test_request4 = Request.create!(order_number: "AE2352359",
                             time_from: "19:30",
                             time_to: "21:00")
 
+test_request5 = Request.create!(order_number: "AE2312384",
+                            name: "Klaus Bachhuber",
+                            delivery_address: "Augsburger Str. 10",
+                            city: "85290 Geisenfeld",
+                            size: "L",
+                            message: "It's an iPhone",
+                            # time_from: DateTime.new(2019,2,5,18,0,0),
+                            # time_to: DateTime.new(2019,2,5,20,0,0),
+                            phone_number: "+49 23751783",
+                            store: test_store1,
+                            time_from: "19:00",
+                            time_to: "22:00")
+
 puts "Finished Requests!"
 
 # Testuser

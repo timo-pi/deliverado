@@ -1,6 +1,8 @@
 .btn-sec {
-  color: white;
-  background-color: #9CA3AC;
+  border-radius: 5px;
+  border: 1px solid $blue;
+  background-color: white;
+  color: $blue;
 }
 .go_back {
   padding: 7px 7px;

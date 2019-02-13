@@ -1,9 +1,18 @@
+.about p {
+  font-size: .8em;
+}
+.about h2 {
+  font-size: 1em;
+}
+.about h3 {
+  font-size: 1.2em;
+}
 video#bgvideo {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   width: auto;
   height: auto;
   z-index: -100;
@@ -13,9 +22,8 @@ video#bgvideo {
   transform: translateX(-50%) translateY(-50%);
   background: url(placeholder.jpg) no-repeat;
   background-size: cover;
+
 }
-
-
 // // Specific CSS for your home-page
 .wrapper-home {
     height: calc(100vh - 70px); /* 70px = navbar height */
@@ -107,7 +115,7 @@ video#bgvideo {
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(255,255,255, .8);
-  margin-top: 10px;
+  margin-top: 80px;
   margin-bottom: 10px;
 
   background-size: 70%;
@@ -136,10 +144,5 @@ background-image: asset-url("deliverado-route.png");
 }
 #money-icon {
   background-image: asset-url("deliverado-money.png");
-
-}
-
-.white-wrapper {
-
 
 }

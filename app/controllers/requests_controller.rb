@@ -12,6 +12,7 @@ class RequestsController < ApplicationController
       redirect_to step_1_path
     else Route.where(user: current_user.id).exists?
       @requests = @requests.near([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude], current_user.routes.first.delivery_radius, units: :km).where(status: 0)
+
     end
 
     if params[:query].present? # query = die suche....

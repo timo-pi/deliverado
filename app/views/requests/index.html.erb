@@ -1,4 +1,9 @@
-<h3>Pending requests</h3>
+<%  if @requests.blank? %>
+ <h5>No open requests within your range!</h5>
+ <%= button_to "Route setup", step_1_path, method: "get", class: "btn btn-primary"  %>
+<% else %>
+ <h3>Pending requests</h3>
+<% end %>
 
 <div class="row">
   <% @requests.each do |request| %>

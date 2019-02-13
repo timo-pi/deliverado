@@ -16,3 +16,18 @@
   max-height: 20vh !important;
   box-sizing: border-box;
 }
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+// .mapboxgl-popup-close-button {
+//   display: none;
+// }

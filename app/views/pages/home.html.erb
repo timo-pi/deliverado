@@ -17,7 +17,7 @@
           <% if user_signed_in? %>
           <%= link_to "See requests", requests_path, class: "btn btn-home btn-primary" %>
           <% else  %>
-          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home faa-horizontal animated" %>
+          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
           <% end %>
          <!-- <div class="row">
             <%#= link_to "About deliverado", about_path, class: "btn btn-home-about" %>

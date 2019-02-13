@@ -31,8 +31,10 @@ class RoutesController < ApplicationController
     @route.name = params[:route][:name]
     @route.user_id = current_user.id
     authorize @route
-    @route.save
-    redirect_to routes_path
+    if @route.save
+      flash[:notice] = "Your route has been created!"
+    end
+    redirect_to requests_path
   end
 
   def destroy

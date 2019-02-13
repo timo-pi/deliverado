@@ -7,23 +7,19 @@
 
       <div class="form-group">
         <%= f.label :delivery_radius, 'Enter the delivery radius:', class: "input-label" %>
-
-        <%#= f.text_field :delivery_radius, type: "text", data: {'slider-id' => 'ex1Slider', "slider-min" => 0, "slider-max" => 30, "slider-step" => 1 }, id: "route_radius"   %>
-        <input type="text" id="delivery_radius" value="">
-
-        <%= f.range_field :delivery_radius, :min=>1, :max=>20, :id=>"delivery_radius", :onchange=>"updateTextInput(this.value)"%>
-
-        <!-- <input type="range" name="delivery_radius" min="0" max="20" onchange="updateTextInput(this.value);"> -->
-
-<script> function updateTextInput(val) {
-          document.getElementById('delivery_radius').value=val;
-        }
-</script>
+        <div class="flex-container">
+        <div class="range-pos">
+          <input type="text" id="show_radius" value=5>
+          <label for="show_radius" id="range-label">km</label>
+        </div>
+        </div>
+        <!-- https://www.w3schools.com/jsref/event_touchend.asp -->
+        <%= f.range_field :delivery_radius, :min=>1, :max=>99, :id=>"delivery_radius", :value=>5, :ontouchmove=>"updateTextInput(this.value)", :onmousemove=>"updateTextInput(this.value)"%>
 
       </div>
-      <%= f.hidden_field :name, value: params[:route][:name] %>
-      <%= f.hidden_field :start_address, value: params[:route][:start_address] %>
-      <%= f.hidden_field :end_address, value: params[:route][:end_address] %>
+        <%= f.hidden_field :name, value: params[:route][:name] %>
+        <%= f.hidden_field :start_address, value: params[:route][:start_address] %>
+        <%= f.hidden_field :end_address, value: params[:route][:end_address] %>
       <div class="form-actions">
         <div class="btn-routes">
           <%= f.button :next, class: "btn btn-primary form-btn" %>
@@ -34,6 +30,7 @@
     </div>
   </div>
 </div>
+
 <!-- Map -->
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
@@ -42,3 +39,9 @@
     </div>
   </div>
 </div>
+
+<!-- update km when slider is moved -->
+<script> function updateTextInput(val) {
+          document.getElementById('show_radius').value=val;
+        }
+</script>

@@ -1,6 +1,6 @@
 class Request < ApplicationRecord
   has_one :delivery, dependent: :destroy
-  belongs_to :store, dependent: :destroy
+  belongs_to :store
   validates :order_number, :delivery_address, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_delivery_address?

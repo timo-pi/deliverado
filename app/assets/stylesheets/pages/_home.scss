@@ -11,8 +11,8 @@ video#bgvideo {
   position: fixed;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   width: auto;
   height: auto;
   z-index: -100;
@@ -115,7 +115,7 @@ video#bgvideo {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(255,255,255, .8);
+  background-color: rgba(255,255,255, .9);
   margin-top: 80px;
   margin-bottom: 10px;
 

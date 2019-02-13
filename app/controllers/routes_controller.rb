@@ -36,7 +36,7 @@ class RoutesController < ApplicationController
     if @route.save
       flash[:notice] = "Your route has been created!"
     end
-    redirect_to requests_path
+    redirect_to routes_path
   end
 
   def destroy

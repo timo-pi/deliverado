@@ -8,10 +8,12 @@ class DeliveriesController < ApplicationController
     @delivery.accepted!
     @delivery.request.accepted!
     authorize @delivery
-    if @delivery.save
-      redirect_to dashboard_path
-    else
-    end
+      if @delivery.save
+        redirect_to dashboard_path
+        flash[:notice] = "You accepted a delivery request."
+      else
+        flash[:alert] = "Error - could not create route!"
+      end
   end
 
   def show

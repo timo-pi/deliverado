@@ -24,6 +24,8 @@ class DeliveriesController < ApplicationController
   end
 
   def edit
+   render layout: "signature"
+
   end
 
   def update

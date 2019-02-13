@@ -25,15 +25,16 @@ test_store3 = Store.create(store_name: "Saturn",
 puts "Finished Stores!"
 
 puts 'Create requests'
+Delivery.destroy_all
 Request.destroy_all
 test_request1 = Request.create!(order_number: "AE6734251",
                             name: "Franz Huber",
                             delivery_address: "Gaimersheimer Str. 3",
                             city: "85098 Ingolstadt",
                             size: "M",
-                            message: "it is a coffee machine",
-                            time_from: DateTime.new(2019,2,5,18,0,0),
-                            time_to: DateTime.new(2019,2,5,20,0,0),
+                            message: "It's a coffee machine",
+                            # time_from: DateTime.new(2019,2,5,18,0,0),
+                            # time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 1513849629",
                             store: test_store1,
                             time_from: "16:00",
@@ -45,8 +46,8 @@ test_request2 = Request.create(order_number: "BD8402548",
                             city: "81675 München",
                             size: "S",
                             message: "I'm home the whole day",
-                            time_from: DateTime.new(2019,2,7,12,0,0),
-                            time_to: DateTime.new(2019,2,7,21,0,0),
+                            # time_from: DateTime.new(2019,2,7,12,0,0),
+                            # time_to: DateTime.new(2019,2,7,21,0,0),
                             phone_number: "+49 176039276",
                             store: test_store3,
                             time_from: "18:00",
@@ -59,23 +60,25 @@ test_request3 = Request.create(order_number: "TN48392664",
                             city: "84048 Mainburg",
                             size: "L",
                             message: "Please be careful",
-                            time_from: DateTime.new(2019,2,6,17,0,0),
-                            time_to: DateTime.new(2019,2,6,19,0,0),
+                            # time_from: DateTime.new(2019,2,6,17,0,0),
+                            # time_to: DateTime.new(2019,2,6,19,0,0),
                             phone_number: "+49 1508893765",
                             store: test_store2,
                             time_from: "12:00",
                             time_to: "20:30")
 
 test_request4 = Request.create!(order_number: "AE2352359",
-                            name: "Tobias Jacob",
+                            name: "Tobias Müller",
                             delivery_address: "Böhmfelder Str. 4",
                             city: "85122 Hofstetten",
                             size: "L",
-                            message: "Danger. Washing machine",
-                            time_from: DateTime.new(2019,2,5,18,0,0),
-                            time_to: DateTime.new(2019,2,5,20,0,0),
+                            message: "Heavy Washing machine",
+                            # time_from: DateTime.new(2019,2,5,18,0,0),
+                            # time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 23351723",
-                            store: test_store1)
+                            store: test_store1,
+                            time_from: "19:30",
+                            time_to: "21:00")
 
 puts "Finished Requests!"
 

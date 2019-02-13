@@ -61,7 +61,7 @@
           <% if user_signed_in? %>
 
           <% else  %>
-          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home faa-horizontal animated" %>
+          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
           <% end %>
          <div class="row">
             <%= link_to "Datenschutzerklärung", about_path %>

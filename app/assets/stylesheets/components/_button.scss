@@ -10,11 +10,18 @@
   padding: 7px 7px;
   margin-right: -74px;
 }
-.accept {
-  padding: 7px 7px;
-  margin-right: -74px;
-}
-.decline {
-  padding: 7px 7px;
-  margin-right: -74px;
+// .accept {
+//   padding: 7px 7px;
+//   margin-right: -74px;
+// }
+// .decline {
+//   padding: 7px 7px;
+//   margin-right: -74px;
+// }
+.btn-accept_decline_button {
+  width: 100%;
+  display: flex;
+  margin-top: 3vh;
+  justify-content: space-between;
+  color: white !important;
 }

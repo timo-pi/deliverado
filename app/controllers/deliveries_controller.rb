@@ -9,7 +9,7 @@ class DeliveriesController < ApplicationController
     @delivery.request.accepted!
     authorize @delivery
     if @delivery.save
-      redirect_to requests_path
+      redirect_to dashboard_path
     else
     end
   end

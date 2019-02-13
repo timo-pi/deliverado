@@ -1,5 +1,5 @@
 <% if @my_deliveries.where.not(status: 'delivered').exists? %>
-<h3>Accepted delivery orders:</h3>
+<h4>Accepted delivery orders:</h4>
 <% end %>
 <div class="row">
   <% @my_deliveries.where.not(status: 'delivered').each do |delivery| %>

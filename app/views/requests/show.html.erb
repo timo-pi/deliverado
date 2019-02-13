@@ -43,14 +43,8 @@
 </div>
 
 <% else %>
-<div class="buttons">
-  <div class="decline">
+  <div class="btn-accept_decline_button">
     <%= link_to "Decline", requests_path, class: "btn btn-sec"  %>
-  </div>
-
-  <div class="accept">
     <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
   </div>
-</div>
 <% end %>
-

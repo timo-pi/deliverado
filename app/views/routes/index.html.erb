@@ -1,28 +1,24 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6  col-sm-offset-2 col-md-offset-3">
-
       <div class="form-banner ">Your current routes:</div>
       <div class="form-card">
        <ol>
-      <% @routes.each do |route| %>
-
+        <% @routes.each do |route| %>
         <%= link_to route_path(route) do %>
-
-        <div class="routes-flex">
-        <div>
-          <li> <%= route.name %></li>
-          </div>
-            <div class="route-delete"><%= link_to "", route_path(route.id), method: 'delete',class: 'far fa-trash-alt fa-1x' %>
+          <div class="routes-flex">
+            <div>
+              <li> <%= route.name %></li>
             </div>
-      </div>
-
+            <div class="route-delete">
+              <%= link_to "", route_path(route.id), method: 'delete',class: 'far fa-trash-alt fa-1x' %>
+            </div>
+          </div>
+          <% end %>
         <% end %>
-      <% end %>
       </ol>
-
       <div class="btn-routes-index">
-      <%= button_to "New route", step_1_path, method: 'get', class: "btn btn-primary form-btn"  %>
-      <%= button_to "Requests", requests_path, method: 'get', class: "btn btn-primary form-btn" %>
+        <%= button_to "New route", step_1_path, method: 'get', class: "btn btn-primary form-btn"  %>
+        <%= button_to "Requests", requests_path, method: 'get', class: "btn btn-primary form-btn" %>
       </div>
     </div>
   </div>

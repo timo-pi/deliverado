@@ -19,7 +19,8 @@ class DeliveriesController < ApplicationController
     @markers << {
 
       lng: @delivery.request.longitude,
-      lat: @delivery.request.latitude
+      lat: @delivery.request.latitude,
+      infoWindow: "Customer address"
     }
   end
 
@@ -40,10 +41,12 @@ class DeliveriesController < ApplicationController
     @markers << [
       {
         lng: @delivery.request.longitude,
-        lat: @delivery.request.latitude
+        lat: @delivery.request.latitude,
+        infoWindow: "Customer address"
       }, {
         lng: routes.end_longitude,
-        lat: routes.end_latitude
+        lat: routes.end_latitude,
+        infoWindows: "Work address"
       }
     ]
      @markers.flatten!

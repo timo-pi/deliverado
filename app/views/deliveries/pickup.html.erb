@@ -26,26 +26,14 @@
     </div>
   </div>
 </div>
-<div class="map_request_show">
-<%= render 'shared/maps' %>
+<div class = "qr-code">
+<%= raw @qr_code.as_html %>
 </div>
- <% if @delivery.status == "delivered" %>
-    <div class="buttons">
-    <div class="go_back">
-      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
-    </div>
-  </div>
-    <br><p>Signature: </p>
-    <%= image_tag @delivery.signature, class: "signature" %>
-</div>
-
-<% else %>
-   <div class="buttons">
+ <div class="buttons">
     <div class="go_back">
       <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
     </div>
     <div class="start_navigation">
-      <%= link_to "Pickup", pickup_delivery_path(@delivery), class: "btn btn-primary"  %>
+      <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary"  %>
     </div>
   </div>
-<% end %>

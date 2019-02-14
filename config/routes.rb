@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :deliveries, only: [:update, :edit, :show] do
     member do
       get "nav"
+      get "pickup"
     end
   end
 end

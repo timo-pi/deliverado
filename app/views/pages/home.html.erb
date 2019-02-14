@@ -6,17 +6,15 @@
     <div id="title-home" class='text-center'>
       <h1>deliverado</h1>
       <p id="tagline">The eco-friendly same day delivery service! </p>
-    </div>
-            <!-- Login link (when logged out) -->
+    </div>            <!-- Login link (when logged out) -->
     <div class="login">
       <div class="col-md-4 text-center" >
         <div class="form-actions">
           <% if user_signed_in? %>
-          <%= link_to "See requests", requests_path, class: "btn btn-home btn-primary" %>
+          <%= link_to "Let's go", requests_path, class: "btn btn-home btn-primary" %>
           <% else  %>
           <%= link_to t(".sign_in", default: "Let's go" ),  new_user_session_path, class: "btn btn-home" %>
           <% end %>
-
         </div>
       </div>
     </div>
@@ -47,19 +45,19 @@
   </div>
 </div>
 <br>
-<%= link_to "Back", root_path(anchor: 'hero'), class: "btn btn-home one-button btn-primary" %>
-
+<%= link_to "Back up", root_path(anchor: 'hero'), class: "btn btn-home one-button btn-primary" %>
 </div>
-  <div class="login">
-    <div class="col-md-4 text-center" >
-       <div class="row">
-        <br>
-          <%= link_to "Datenschutzerklärung", about_path %>
-        </div>
+    <div class="login">
+      <div class="col-md-4 text-center" >
+         <div class="row">
+          <br>
+            <%= link_to "Privacy Policy", about_path, style:"color:white;" %>
+          </div>
+      </div>
     </div>
   </div>
 <!-- slows down the video -->
 <script>
  var vid = document.getElementById("bgvideo");
- vid.playbackRate = 0.4;
+ vid.playbackRate = 0.7;
 </script>

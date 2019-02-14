@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "deliverado.com"
+meta_title: "deliverado.com - The eco-friendly same day delivery service"
+meta_description: "deliverado is a platform for commuters who want to take small delivery jobs and earn some extra money"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

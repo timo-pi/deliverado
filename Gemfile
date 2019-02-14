@@ -20,6 +20,8 @@ gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'geocoder'
 gem 'john_hancock'
+gem 'rqrcode'
+gem 'rqrcode-with-patches'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

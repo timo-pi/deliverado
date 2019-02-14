@@ -1,5 +1,5 @@
 class DeliveriesController < ApplicationController
-  before_action :set_delivery, only: [:show, :edit, :update, :nav]
+  before_action :set_delivery, only: [:show, :edit, :update, :nav, :pickup]
 
   def create
     @delivery = Delivery.new
@@ -39,7 +39,13 @@ class DeliveriesController < ApplicationController
     end
   end
 
+  def pickup
+    @delivery.pickedup!
+    @qr_code = RQRCode::QRCode.new(@delivery.request.order_number, :size => 3, :level => :h )
+  end
+
   def nav
+    @delivery.ontheway!
     routes = @delivery.user.routes.first
     @markers = []
     @markers << [
@@ -63,4 +69,5 @@ class DeliveriesController < ApplicationController
     @delivery = Delivery.find(params[:id])
     authorize @delivery
   end
+
 end

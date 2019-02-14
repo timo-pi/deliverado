@@ -1,7 +1,9 @@
 <div id="signature-canvas" class='text-center'>
+<div class="watermark text-center"><p>Sign here please</p></div>
   <%= form_for @delivery do |f| %>
     <%= f.signature_field :signature %>
 </div>
+
 <div id="update" class="text-center">
   <%= f.submit "Finish Delivery", class: "btn btn-primary finish-button" %>
   <% end %>

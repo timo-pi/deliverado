@@ -37,8 +37,8 @@ puts 'Create new requests'
 
 test_request1 = Request.create!(order_number: "AE6734251",
                             name: "Franz Huber",
-                            delivery_address: "Finkenstr. 5",
-                            city: "85088 Vohburg",
+                            delivery_address: "Wendenstr. 6",
+                            city: "85084 Reichertshofen",
                             size: "M",
                             message: "It's a coffee machine",
                             # time_from: DateTime.new(2019,2,5,18,0,0),
@@ -46,34 +46,37 @@ test_request1 = Request.create!(order_number: "AE6734251",
                             phone_number: "+49 1513849629",
                             store: test_store3,
                             time_from: "16:00",
-                            time_to: "20:00")
+                            time_to: "20:00",
+                            price: 500)
 
 test_request2 = Request.create(order_number: "BD84025484",
                             name: "Stefan Bauer",
-                            delivery_address: "Eichenstr. 40",
-                            city: "85098 Großmehring",
+                            delivery_address: "Schwalbenäcker 10",
+                            city: "84089 Aiglsbach",
                             size: "S",
                             message: "I'm home the whole day",
                             # time_from: DateTime.new(2019,2,7,12,0,0),
                             # time_to: DateTime.new(2019,2,7,21,0,0),
                             phone_number: "+49 176039276",
                             store: test_store1,
-                            time_from: "18:00",
-                            time_to: "19:30")
+                            time_from: "12:00",
+                            time_to: "21:30",
+                            price: 500)
 
 test_request3 = Request.create(order_number: "TN48392664",
 
                             name: "Walter Simson",
-                            delivery_address: "Promenadenweg 9",
-                            city: "84048 Mainburg",
+                            delivery_address: "Kapellenweg 12",
+                            city: "85119 Ernsgaden",
                             size: "L",
                             message: "Please be careful",
                             # time_from: DateTime.new(2019,2,6,17,0,0),
                             # time_to: DateTime.new(2019,2,6,19,0,0),
                             phone_number: "+49 1508893765",
                             store: test_store2,
-                            time_from: "12:00",
-                            time_to: "20:30")
+                            time_from: "15:00",
+                            time_to: "20:30",
+                            price: 500)
 
 test_request4 = Request.create!(order_number: "AE2352359",
                             name: "Tobias Müller",
@@ -86,7 +89,8 @@ test_request4 = Request.create!(order_number: "AE2352359",
                             phone_number: "+49 23351723",
                             store: test_store3,
                             time_from: "19:30",
-                            time_to: "21:00")
+                            time_to: "21:00",
+                            price: 500)
 
 test_request5 = Request.create!(order_number: "AE2312384",
                             name: "Klaus Bachhuber",
@@ -99,7 +103,8 @@ test_request5 = Request.create!(order_number: "AE2312384",
                             phone_number: "+49 23751783",
                             store: test_store1,
                             time_from: "19:00",
-                            time_to: "22:00")
+                            time_to: "22:00",
+                            price: 500)
 
 puts "Finished Requests!"
 

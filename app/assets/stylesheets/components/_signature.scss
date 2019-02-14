@@ -3,6 +3,7 @@
 }
 
 #signature-canvas {
+  position: relative;
   height: 80vh;
   // max-width: 95vw;
   max-height: 80px;
@@ -11,6 +12,7 @@
   border-radius: 4px;
   margin-bottom: 6vh;
   width: 100vw;
+  background-color: white;
 }
 #update {
  margin: 0px auto;
@@ -25,4 +27,13 @@
 
 .finish-button {
   border-radius: 5px;
+}
+
+.watermark {
+  position: absolute;
+  color: #EBEDEF;
+  left: 20px;
+  top: 20px;
+  font-size: 50px;
+
 }

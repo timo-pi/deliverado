@@ -8,6 +8,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { init_slider } from "../plugins/slider.js";
 import { nav } from "../plugins/nav.js";
+import { PlaySound } from "../plugins/play_sound.js";
 
 initMapbox();
 initAutocomplete();

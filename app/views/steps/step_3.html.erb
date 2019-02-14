@@ -14,7 +14,7 @@
         </div>
         </div>
         <!-- https://www.w3schools.com/jsref/event_touchend.asp -->
-        <%= f.range_field :delivery_radius, :min=>1, :max=>99, :id=>"delivery_radius", :value=>5, :ontouchmove=>"updateTextInput(this.value)", :onmousemove=>"updateTextInput(this.value)"%>
+        <%= f.range_field :delivery_radius, :min=>1, :max=>30, :id=>"delivery_radius", :value=>5, :ontouchmove=>"updateTextInput(this.value)", :onmousemove=>"updateTextInput(this.value)", :ontouchend=>"updateTextInput(this.value)", :onmouseup=>"updateTextInput(this.value)"%>
 
       </div>
         <%= f.hidden_field :name, value: params[:route][:name] %>

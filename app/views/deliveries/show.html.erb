@@ -31,8 +31,8 @@
 </div>
  <% if @delivery.status == "delivered" %>
     <div class="one-button">
-    <div class="go_back">
-      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
+    <div class="go-back">
+      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec go-back"  %>
     </div>
   </div>
   <br>
@@ -43,11 +43,11 @@
 
 <% else %>
    <div class="buttons">
-    <div class="go_back">
-      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
+    <div class="go-back">
+      <%= link_to "Go Back", dashboard_path, class: "btn btn-sec go-back"  %>
     </div>
-    <div class="start_navigation">
-      <%= link_to "Pickup", pickup_delivery_path(@delivery), class: "btn btn-primary start_navigation"  %>
+    <div class="go-forward">
+      <%= link_to "Pickup", pickup_delivery_path(@delivery), class: "btn btn-primary go-forward"  %>
     </div>
   </div>
   <br>

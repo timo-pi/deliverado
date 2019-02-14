@@ -32,19 +32,19 @@
 </div>
 <% if @request.status == "accepted" %>
 <div class="buttons">
-  <div class="go_back">
-    <%= link_to "Go Back", dashboard_path, class: "btn btn-sec"  %>
+  <div class="go-back">
+    <%= link_to "Go Back", dashboard_path, class: "btn btn-sec go-back"  %>
   </div>
-  <div class="start_navigation">
-    <%= link_to "Start Navigation", edit_delivery_path, class: "btn btn-primary"  %>
+  <div class="go-forward">
+    <%= link_to "Start Navigation", edit_delivery_path, class: "btn btn-primary go-forward"  %>
   </div>
 </div>
 
 <% else %>
 <div class="buttons">
   <div class="btn-accept_decline_button">
-    <%= link_to "Decline", requests_path, class: "btn btn-sec"  %>
-    <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
+    <%= link_to "Decline", requests_path, class: "btn btn-sec go-forward"  %>
+    <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary go-forward"  %>
   </div>
 </div>
 <% end %>

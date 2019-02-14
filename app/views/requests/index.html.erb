@@ -21,8 +21,8 @@
           <%= request.store.store_address %>, <%= request.store.store_city %>
         </p>
         <p id="address">
-
-
+          payment: <%= (request.price / 100) %> €
+          <br>
           detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
           <br>
           delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>
@@ -53,7 +53,8 @@
           <%= request.store.store_address %>, <%= request.store.store_city %>
         </p>
         <p id="address">
-
+          payment: <%= (request.price / 100) %> €
+          <br>
           detour: <%= request.distance_to_delivery([current_user.routes.first.start_latitude, current_user.routes.first.start_longitude]).round(2) %> km
           <br>
           delivery between <%= request.time_from.strftime("%H:%M") %> - <%= request.time_to.strftime("%H:%M") %>

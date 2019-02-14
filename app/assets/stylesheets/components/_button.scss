@@ -1,9 +1,15 @@
 .btn-sec {
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid $blue;
   background-color: white;
   color: $blue;
 }
+
+
+ .btn-sec:visited {
+    color: $blue-sec !important;
+  }
+
 .go_back {
   padding: 7px 7px;
   // margin-left: -74px;

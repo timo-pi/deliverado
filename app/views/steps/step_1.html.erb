@@ -6,18 +6,18 @@
       <%= form_for :route, url: { action: "step_2"}, method: :get do |f| %>
 
       <div class="form-group">
-        <%= f.label :name, 'Route Name:', class: "input-label" %>
+        <%= f.label :name, 'Route name:', class: "input-label" %>
         <%= f.text_field :name, class: "input-box route-name" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :start_address, 'Enter your home address:', class: "input-label" %>
+        <%= f.label :start_address, 'Home address:', class: "input-label" %>
         <%= f.text_field :start_address, class: "input-box", id: "flat_address" %>
       </div>
 
       <div class="form-actions">
         <div class="btn-routes">
-        <%= f.button :next, class: "btn btn-primary form-btn" %>
+        <%= f.button :Next, class: "btn btn-primary form-btn" %>
       </div>
       </div>
       <% end %>

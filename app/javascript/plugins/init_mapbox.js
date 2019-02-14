@@ -3,6 +3,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
+
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
@@ -10,12 +11,13 @@ const initMapbox = () => {
   };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
+    const markers = JSON.parse(mapElement.dataset.markers);
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
+    center: [markers[0].lng, markers[0].lat],
     style: 'mapbox://styles/uhmie/cjruq2ggj0q2k1ftbsktluram'
   });
-  const markers = JSON.parse(mapElement.dataset.markers);
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup({
       closeButton: false,

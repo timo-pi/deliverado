@@ -14,7 +14,7 @@
           <% if user_signed_in? %>
           <%= link_to "See requests", requests_path, class: "btn btn-home btn-primary" %>
           <% else  %>
-          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
+          <%= link_to t(".sign_in", default: "Let's go" ),  new_user_session_path, class: "btn btn-home" %>
           <% end %>
 
         </div>

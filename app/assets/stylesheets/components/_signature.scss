@@ -1,23 +1,23 @@
-#JohnHancock-canvas {
-  min-height: inherit;
-  width: 100% !important;
-  // padding: 100% 100%;
-  // margin: auto;
-}
-
 .edit_delivery {
   min-height: inherit;
 }
 
 #signature-canvas {
-  font-size: 10px;
-  max-width: 98vw;
-  // max-height: 250px;
-  min-height: 50vh;
+  height: 80vh;
+  // max-width: 95vw;
+  max-height: 80px;
+  min-height: 80vh;
   border: 1px solid;
   border-radius: 4px;
-  margin: 30px 5px;
+  margin-bottom: 6vh;
 }
 #update {
  margin: 0px auto;
+}
+
+#JohnHancock-canvas {
+  min-height: inherit;
+  height: 80vh;
+  max-height: inherit;
+  width: 100% !important;
 }

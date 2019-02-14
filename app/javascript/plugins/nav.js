@@ -11,12 +11,13 @@ function nav(){
     map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
   };
   if (mapElement){ // only build a map if there's a div#map to inject into
+    const markers = JSON.parse(mapElement.dataset.markers);
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'mapNav',
+      center: [markers[0].lng, markers[0].lat],
       style: 'mapbox://styles/uhmie/cjruq2ggj0q2k1ftbsktluram'
     });
-    const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])

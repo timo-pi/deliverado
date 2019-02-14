@@ -9,3 +9,21 @@
   justify-content: center;
   margin: 15px auto;
 }
+
+.buttons-wide {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 15px auto;
+  margin-top: 20px;
+}
+
+.all-qr {
+  box-shadow: 4px 4px 15px -2px rgba(143,143,143,0.53);
+  font-size: 80%;
+  line-height: 0.8;
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 1px;
+  margin-top: 10px;
+}

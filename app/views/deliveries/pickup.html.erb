@@ -26,11 +26,11 @@
     </div>
   </div>
 </div>
-<div class = "qr-code">
-<%= raw @qr_code.as_html %>
-</div>
-<div class="all">
- <div class="buttons">
+<div class="all-qr">
+  <div class = "qr-code">
+    <%= raw @qr_code.as_html %>
+  </div>
+  <div class="buttons-wide">
     <div class="go-back">
       <%= link_to "Go Back", dashboard_path, class: "btn btn-sec go-back"  %>
     </div>
@@ -38,4 +38,5 @@
       <%= link_to "Start Navigation", nav_delivery_path(@delivery), class: "btn btn-primary go-forward"  %>
     </div>
   </div>
+  <br>
 </div>

@@ -39,7 +39,7 @@ class DeliveriesController < ApplicationController
 
   def pickup
     @delivery.pickedup!
-    @qr_code = RQRCode::QRCode.new(@delivery.request.order_number, :size => 3, :level => :h )
+    @qr_code = RQRCode::QRCode.new(@delivery.request.order_number, :size => 2, :level => :h )
   end
 
   def nav

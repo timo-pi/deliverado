@@ -1,4 +1,4 @@
-<h4>Order: <%= @delivery.request.order_number %></h4>
+<h4>Order <%= @delivery.request.order_number %></h4>
 
 <div class="all">
   <div class="top">
@@ -25,16 +25,18 @@
       <p><%= @delivery.request.phone_number %></p>
     </div>
   </div>
-</div>
+
 <div class="map_request_show">
 <%= render 'shared/maps' %>
 </div>
  <% if @delivery.status == "delivered" %>
-    <div class="buttons">
+    <div class="one-button">
     <div class="go_back">
       <%= link_to "Go Back", dashboard_path, class: "btn btn-sec "  %>
     </div>
   </div>
+  <br>
+</div>
     <br><p>Signature: </p>
     <%= image_tag @delivery.signature, class: "signature" %>
 </div>
@@ -48,4 +50,6 @@
       <%= link_to "Pickup", pickup_delivery_path(@delivery), class: "btn btn-primary"  %>
     </div>
   </div>
+  <br>
 <% end %>
+</div>

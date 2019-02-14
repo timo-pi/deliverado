@@ -21,9 +21,9 @@ test_store1 = Store.create(store_name: "MediaMarkt",
                           phone_number: "+49 841 96870")
 
 test_store2 = Store.create(store_name: "MediaMarkt",
-                          store_address: "Maria-Probst-Str. 11",
-                          store_city: "80939 München",
-                          phone_number: "+49 89 318530")
+                          store_address: "Am Südpark 7",
+                          store_city: "86633 Neuburg an der Donau",
+                          phone_number: "+49 8431 62990")
 
 test_store3 = Store.create(store_name: "Saturn",
                           store_address: "Am Westpark 7",
@@ -44,26 +44,26 @@ test_request1 = Request.create!(order_number: "AE6734251",
                             # time_from: DateTime.new(2019,2,5,18,0,0),
                             # time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 1513849629",
-                            store: test_store1,
+                            store: test_store3,
                             time_from: "16:00",
                             time_to: "20:00")
 
 test_request2 = Request.create(order_number: "BD8402548",
-                            name: "Stefan Mustermann",
-                            delivery_address: "Prinzregentenstr. 74",
-                            city: "81675 München",
+                            name: "Stefan Bauer",
+                            delivery_address: "Eichenstr. 40",
+                            city: "85098 Großmehring",
                             size: "S",
                             message: "I'm home the whole day",
                             # time_from: DateTime.new(2019,2,7,12,0,0),
                             # time_to: DateTime.new(2019,2,7,21,0,0),
                             phone_number: "+49 176039276",
-                            store: test_store3,
+                            store: test_store1,
                             time_from: "18:00",
                             time_to: "19:30")
 
 test_request3 = Request.create(order_number: "TN48392664",
 
-                            name: "Ezgi Seyis",
+                            name: "Walter Simson",
                             delivery_address: "Promenadenweg 9",
                             city: "84048 Mainburg",
                             size: "L",
@@ -84,7 +84,7 @@ test_request4 = Request.create!(order_number: "AE2352359",
                             # time_from: DateTime.new(2019,2,5,18,0,0),
                             # time_to: DateTime.new(2019,2,5,20,0,0),
                             phone_number: "+49 23351723",
-                            store: test_store1,
+                            store: test_store3,
                             time_from: "19:30",
                             time_to: "21:00")
 

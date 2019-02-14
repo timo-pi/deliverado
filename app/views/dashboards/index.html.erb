@@ -1,5 +1,16 @@
+<%  if @my_deliveries.blank? %>
+ <h4 class="deliverado-font text-center">No open or finished deliveries<br>in your dashboard</h4>
+ <div class="smiley">
+ <i class="far fa-sad-tear"></i>
+ </div>
+ <%= button_to "To Requests", requests_path, method: 'get', class: "btn btn-primary form-btn one-button" %>
+<% else %>
+ <h3 class="deliverado-font text-center">Dashboard</h3>
+<% end %>
+
+
 <% if @my_deliveries.where.not(status: 'delivered').exists? %>
-<h3 class="deliverado-font">Accepted</h3>
+<h4 class="deliverado-font">Accepted</h4>
 <% end %>
 <div class="row">
   <% @my_deliveries.where.not(status: 'delivered').each do |delivery| %>
@@ -68,7 +79,7 @@
 </div>
 
 <% if @my_deliveries.where(status: 'delivered').exists? %>
-<h3 class="deliverado-font">Finished</h3>
+<h4 class="deliverado-font">Finished</h4>
 <% end %>
 <div class="row">
   <% @my_deliveries.where(status: 'delivered').each do |delivery| %>

@@ -1,4 +1,4 @@
-<h4>Order: <%= @request.order_number %></h4>
+<h4>Order <%= @request.order_number %></h4>
 
 <div class="all">
   <div class="top">
@@ -26,7 +26,7 @@
       <p><%= @request.phone_number %></p>
     </div>
   </div>
-</div>
+
 <div class="map_request_show">
 <%= render 'shared/maps' %>
 </div>
@@ -41,8 +41,12 @@
 </div>
 
 <% else %>
+<div class="buttons">
   <div class="btn-accept_decline_button">
     <%= link_to "Decline", requests_path, class: "btn btn-sec"  %>
     <%= button_to "Accept", request_deliveries_path(@request.id), class: "btn btn-primary"  %>
   </div>
+</div>
 <% end %>
+<br>
+</div>

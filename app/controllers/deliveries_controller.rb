@@ -11,8 +11,6 @@ class DeliveriesController < ApplicationController
       if @delivery.save
         redirect_to dashboard_path
         flash[:notice] = "You accepted a delivery request."
-      else
-        flash[:alert] = "Error - could not create route!"
       end
   end
 

@@ -1,9 +1,11 @@
-<div class="wrapper-home">
-  <div id="hero">
-    <video playsinline autoplay muted loop poster="../../assets/placeholder.png" id="bgvideo">
-      <source src="https://res.cloudinary.com/dvxyqhn8o/video/upload/v1549946368/Traffic_-_243_1.mp4">
-    </video>
-    <div id="title-home" class='text-center'>
+<div class="promo">
+
+  <video autoplay="autoplay" id="home-video" src="https://res.cloudinary.com/dvxyqhn8o/video/upload/v1549946368/Traffic_-_243_1.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<div id="title-home" class='text-center'>
       <h1>deliverado</h1>
       <p id="tagline">The eco-friendly same day delivery service! </p>
     </div>
@@ -16,7 +18,9 @@
           <% else  %>
           <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
           <% end %>
-
+         <!-- <div class="row">
+            <%#= link_to "About deliverado", about_path, class: "btn btn-home-about" %>
+          </div> -->
         </div>
       </div>
     </div>
@@ -26,40 +30,46 @@
 <div class="row">
 
   <div class="col-xs-12 col-md-6">
-    <div class="home-icon" id="net-icon">
-     <h3>A delivery net of commuters</h3>
+    <div class="home-icon" id="register-icon">
+     <h3>Register as a driver</h3>
    </div>
   </div>
  <div class="col-xs-12 col-md-6">
-  <div class="home-icon" id="eco-icon">
-    <h3>Less delivery traffic & environmental impact</h3>
+  <div class="home-icon" id="route-icon">
+    <h3>Enter your commuter routes</h3>
   </div>
 </div>
   <div class="col-xs-12 col-md-6">
-    <div class="home-icon" id="speed-icon">
-      <h3>Fast same day delivery</h3>
+    <div class="home-icon" id="order-icon">
+      <h3>Select a delivery request</h3>
     </div>
   </div>
   <div class="col-xs-12 col-md-6">
     <div class="home-icon" id="money-icon">
-      <h3>Attractive for drivers, affordable for customers</h3>
+      <h3>Earn money with every delivery</h3>
     </div>
   </div>
 </div>
+
 
 </div>
 
     <div class="login">
       <div class="col-md-4 text-center" >
+        <div class="form-actions">
+          <% if user_signed_in? %>
+
+          <% else  %>
+          <%= link_to t(".sign_in", default: "Login" ),  new_user_session_path, class: "btn btn-home" %>
+          <% end %>
          <div class="row">
-          <br>
             <%= link_to "Datenschutzerklärung", about_path %>
           </div>
+        </div>
       </div>
     </div>
 <!-- slows down the video -->
 <script>
- var vid = document.getElementById("bgvideo");
+ var vid = document.getElementById("home-video");
  vid.playbackRate = 0.4;
 </script>
-

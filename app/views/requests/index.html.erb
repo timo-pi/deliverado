@@ -1,8 +1,10 @@
 <%  if @requests.blank? %>
- <h5>No open requests within your range!</h5>
- <%= button_to "Route setup", step_1_path, method: "get", class: "btn btn-primary"  %>
+ <h4 class="deliverado-font text-center">No open requests within your range!</h4>
+ <div class="smiley">
+ <i class="far fa-sad-tear"></i>
+ </div>
 <% else %>
- <h4>Pending requests</h4>
+ <h4 class="deliverado-font">Pending requests</h4>
 <% end %>
 
 <div class="row">

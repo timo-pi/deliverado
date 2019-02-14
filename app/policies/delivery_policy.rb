@@ -21,6 +21,10 @@ class DeliveryPolicy < ApplicationPolicy
     edit?
   end
 
+  def pickup?
+    show?
+  end
+
   def nav?
     show?
   end

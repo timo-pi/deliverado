@@ -11,8 +11,8 @@ video#bgvideo {
   position: fixed;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   width: auto;
   height: auto;
   z-index: -100;
@@ -115,39 +115,44 @@ video#bgvideo {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgba(255,255,255, .8);
+  background-color: rgba(255,255,255, 1);
   margin-top: 80px;
   margin-bottom: 10px;
 
-  background-size: 70%;
+  background-size: 200px;
   background-repeat: no-repeat;
   background-position: center 15%;
 
   text-align: center;
-  padding: 75% 3% 5% 3%;
+  padding: 210px 5px 5px 5px;
   color: $blue !important;
+  height: 360px;
+    & h3 {
+    color: #333;
+    font-size: 38px;
+  }
 
 }
 
-#register-icon {
+#net-icon {
 
-background-image: asset-url("deliverado-register.png");
+background-image: asset-url("icon-net-2.svg");
 
-
-}
-#route-icon {
-background-image: asset-url("deliverado-route.png");
 
 }
-#order-icon {
-  background-image: asset-url("deliverado-order.png");
+#eco-icon {
+background-image: asset-url("icon-eco-2.svg");
+
+}
+#speed-icon {
+  background-image: asset-url("icon-speed-2.svg");
 
 }
 #money-icon {
-  background-image: asset-url("deliverado-money.png");
+  background-image: asset-url("icon-money-2.svg");
 
 }
 
-.dsgvo {
-  margin-top: 10px;
+.deliverado-font {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }

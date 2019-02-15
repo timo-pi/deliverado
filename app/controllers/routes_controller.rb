@@ -1,7 +1,7 @@
 class RoutesController < ApplicationController
   def index
     if Route.where(user: current_user.id).blank?
-      flash[:alert] = "No commuter route found - please create a route"
+      flash[:info] = "No commuter route found - please create a route"
     end
     @routes = policy_scope(Route)
     @markers = @routes.map do |route|

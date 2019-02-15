@@ -1,0 +1,16 @@
+#team-image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.wrapper-about-flex {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  justify-content: space-between;
+  padding-top: 2vh;
+}
+.about-text-wrapper {
+  margin-top: 5vh;
+}

@@ -7,9 +7,17 @@
   text-align: center;
   color: white;
 }
-.alert-info {
+.alert-notice {
   background: $green;
 }
 .alert-warning {
   background: $red;
+}
+
+.alert-info {
+  background: $white;
+  color: $blue;
+  border-radius: 0 0 10px 10px;
+  border-color: $blue;
+
 }

@@ -54,13 +54,19 @@
 
 .step-number {
   font-size: 56px;
+  margin-top: 2px;
 }
 .step-flex {
 
   display: flex;
 }
-.step-text {
-  margin-top: 14px;
-  margin-left: 5px;
-}
 
+.step-text {
+  justify-content: center;
+}
+.flex-steps-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}

@@ -1,7 +1,12 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
-      <div class="form-banner step-flex"><span class="step-number">2</span><span class="step-text"> Enter the address of your place of work:</span></div>
+      <div class="form-banner step-flex"><span class="step-number">2</span>
+        <div class="flex-steps-text">
+          <span class="step-text">Enter the address of your place of work.</span>
+        </div>
+      </div>
+
       <div class="form-card">
       <%= form_for :route, url: { action: "step_3"}, method: :get do |f| %>
 

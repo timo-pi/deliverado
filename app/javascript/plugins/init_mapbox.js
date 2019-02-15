@@ -7,7 +7,7 @@ const initMapbox = () => {
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
+    map.fitBounds(bounds, { padding: 50, maxZoom: 13 });
   };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
@@ -16,7 +16,8 @@ const initMapbox = () => {
   const map = new mapboxgl.Map({
     container: 'map',
     center: [markers[0].lng, markers[0].lat],
-    style: 'mapbox://styles/uhmie/cjruq2ggj0q2k1ftbsktluram'
+    style: 'mapbox://styles/uhmie/cjruq2ggj0q2k1ftbsktluram',
+    zoom: 5
   });
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup({

@@ -18,7 +18,7 @@
   <div class="col-xs-12 col-sm-6 col-md-6">
 
     <% if delivery.request.store.store_name.include? "MediaMarkt" %>
-    <div class="card-mediamarkt red">
+    <div class="card-mediamarkt orange">
       <div class="logo" style="background-image: url('<%= image_url "mediamarkt-logo.png" %>');background-size: cover;">
       </div>
       <div class="card-info">
@@ -46,7 +46,7 @@
 
 
     <% else %>
-    <div class="card-saturn red">
+    <div class="card-saturn orange">
       <div class="logo" style="background-image: url('<%= image_url "saturn-logo.png" %>');background-size: cover;">
       </div>
       <div class="card-info">

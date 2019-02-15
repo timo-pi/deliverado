@@ -31,7 +31,7 @@ class DeliveriesController < ApplicationController
 
   def update
     if @delivery.update(signature: params[:delivery][:signature], status: "delivered")
-      redirect_to dashboard_path, :notice => "Congratulations, you've just earned 5 €."
+      redirect_to delivery_path(@delivery), :notice => "Congratulations, you've just earned 5 €."
     else
       render :edit
     end
